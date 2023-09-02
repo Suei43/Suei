@@ -1,3 +1,17 @@
 @import 'tailwindcss/base';
 @import 'tailwindcss/components';
 @import 'tailwindcss/utilities';
+
+:root {
+    background-color: #2C3539;
+    color: #FCFBFC;
+  }
+.nav-right {
+    border-left: 1px solid #8892b0;
+}
+.nav-left {
+    border-right: 1px solid #8892b0;
+}
+.social-icon {
+    cursor: pointer;
+}
