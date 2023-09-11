@@ -3,8 +3,8 @@ export default function LeftNav(){
         <div className="h-screen w-16 flex flex-col-reverse nav-left fixed left-0 top-0 z-10">
             <div className="w-full flex flex-col items-center justify-center gap-y-10 py-12">
                 <svg 
-                    width="32" 
-                    height="32" 
+                    width="28" 
+                    height="28" 
                     viewBox="0 0 192 192" 
                     xmlns="http://www.w3.org/2000/svg" 
                     fill="none"
@@ -13,19 +13,19 @@ export default function LeftNav(){
                     <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
                     <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
                     <g id="SVGRepo_iconCarrier">
-                        <path stroke="#ffffff" stroke-linecap="round" stroke-linejoin="round" stroke-width="9.6" d="m68 138-8 16c-10.19-4.246-20.742-8.492-31.96-15.8-3.912-2.549-6.284-6.88-6.378-11.548-.488-23.964 5.134-48.056 19.369-73.528 1.863-3.334 4.967-5.778 8.567-7.056C58.186 43.02 64.016 40.664 74 39l6 11s6-2 16-2 16 2 16 2l6-11c9.984 1.664 15.814 4.02 24.402 7.068 3.6 1.278 6.704 3.722 8.567 7.056 14.235 25.472 19.857 49.564 19.37 73.528-.095 4.668-2.467 8.999-6.379 11.548-11.218 7.308-21.769 11.554-31.96 15.8l-8-16m-68-8s20 10 40 10 40-10 40-10"></path>
-                        <ellipse cx="71" cy="101" fill="#ffffff" rx="13" ry="15"></ellipse>
-                        <ellipse cx="121" cy="101" fill="#ffffff" rx="13" ry="15"></ellipse>
+                        <path stroke="#8892b0" stroke-linecap="round" stroke-linejoin="round" stroke-width="9.6" d="m68 138-8 16c-10.19-4.246-20.742-8.492-31.96-15.8-3.912-2.549-6.284-6.88-6.378-11.548-.488-23.964 5.134-48.056 19.369-73.528 1.863-3.334 4.967-5.778 8.567-7.056C58.186 43.02 64.016 40.664 74 39l6 11s6-2 16-2 16 2 16 2l6-11c9.984 1.664 15.814 4.02 24.402 7.068 3.6 1.278 6.704 3.722 8.567 7.056 14.235 25.472 19.857 49.564 19.37 73.528-.095 4.668-2.467 8.999-6.379 11.548-11.218 7.308-21.769 11.554-31.96 15.8l-8-16m-68-8s20 10 40 10 40-10 40-10"></path>
+                        <ellipse cx="71" cy="101" fill="#8892b0" rx="13" ry="15"></ellipse>
+                        <ellipse cx="121" cy="101" fill="#8892b0" rx="13" ry="15"></ellipse>
                     </g>
                 </svg>
 
                 <svg
                     xmlns="http://www.w3.org/2000/svg"
-                    width="24"
-                    height="24"
+                    width="20"
+                    height="20"
                     viewBox="0 0 24 24"
                     fill="none"
-                    stroke="currentColor"
+                    stroke="#8892b0"
                     stroke-width="2"
                     stroke-linecap="round"
                     stroke-linejoin="round"
@@ -38,11 +38,11 @@ export default function LeftNav(){
 
                 <svg
                     xmlns="http://www.w3.org/2000/svg"
-                    width="24"
-                    height="24"
+                    width="20"
+                    height="20"
                     viewBox="0 0 24 24"
                     fill="none"
-                    stroke="currentColor"
+                    stroke="#8892b0"
                     stroke-width="2"
                     stroke-linecap="round"
                     stroke-linejoin="round"
@@ -55,11 +55,11 @@ export default function LeftNav(){
 
                 <svg
                     xmlns="http://www.w3.org/2000/svg"
-                    width="24"
-                    height="24"
+                    width="20"
+                    height="20"
                     viewBox="0 0 24 24"
                     fill="none"
-                    stroke="currentColor"
+                    stroke="#8892b0"
                     stroke-width="2"
                     stroke-linecap="round"
                     stroke-linejoin="round"
@@ -74,11 +74,11 @@ export default function LeftNav(){
 
                 <svg
                     xmlns="http://www.w3.org/2000/svg"
-                    width="24"
-                    height="24"
+                    width="20"
+                    height="20"
                     viewBox="0 0 24 24"
                     fill="none"
-                    stroke="currentColor"
+                    stroke="#8892b0"
                     stroke-width="2"
                     stroke-linecap="round"
                     stroke-linejoin="round"

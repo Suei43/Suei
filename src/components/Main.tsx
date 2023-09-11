@@ -1,7 +1,10 @@
+import Intro from "./Intro";
+
 export default function Main(){
     return (
-        <div className="w-5/6 h-screen">
-            
+        <div className="w-full h-screen">
+            <Intro />
         </div>
+
     )
 }

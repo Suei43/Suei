@@ -5,6 +5,8 @@
 :root {
     background-color: #2C3539;
     color: #FCFBFC;
+    font-family: 'Chakra Petch', sans-serif;
+    overflow-x: hidden;
   }
 .nav-right {
     border-left: 1px solid #8892b0;
