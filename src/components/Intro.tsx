@@ -10,7 +10,7 @@ export default function Intro(){
             <h2 className="text-secondary">SOFTWARE ENGINEER | QUALITY ASSURANCE TESTER</h2>
             <p className="w-8/12">I build accessible, inclusive digital products and create eccentric, unique and captivating web experiences.</p>
             <button onClick={handleResumeClick} className="text-secondary border border-secondary py-3 w-40 rounded-md mt-5">
-                Resume
+                Résumé
             </button>
         </div>
     )

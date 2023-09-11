@@ -3,21 +3,6 @@ export default function RightNav(){
         <div className="h-screen w-14 flex flex-col nav-right fixed right-0 top-0 z-10">
             <nav className="w-full flex flex-col items-center justify-center gap-y-14 py-12">
             <svg 
-                width="30" 
-                height="30" 
-                viewBox="0 0 24.00 24.00" 
-                fill="none" 
-                xmlns="http://www.w3.org/2000/svg"
-                className="social-icon"
-            >
-                <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
-                <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
-                <g id="SVGRepo_iconCarrier"> 
-                <path d="M7 8L3 11.6923L7 16M17 8L21 11.6923L17 16M14 4L10 20" stroke="#0579C3" stroke-width="1.32" stroke-linecap="round" stroke-linejoin="round"></path>
-                </g>
-            </svg>
-
-            <svg 
                 fill="#8892b0" 
                 width="22" 
                 height="22" 
@@ -34,6 +19,22 @@ export default function RightNav(){
                 <path d="M97.222,610.717a1.475,1.475,0,0,1-.626-.14,1.459,1.459,0,0,1-.848-1.333V580.572A3.576,3.576,0,0,1,99.32,577h26.69a3.576,3.576,0,0,1,3.572,3.572v20.416a3.576,3.576,0,0,1-3.572,3.571H106.038a2.555,2.555,0,0,0-1.637.594l-6.24,5.22A1.467,1.467,0,0,1,97.222,610.717ZM99.32,579a1.574,1.574,0,0,0-1.572,1.572V608.11l5.37-4.491a4.561,4.561,0,0,1,2.92-1.06H126.01a1.573,1.573,0,0,0,1.572-1.571V580.572A1.574,1.574,0,0,0,126.01,579Z"></path> 
                 </g> </g>
             </svg>
+            
+            <svg 
+                width="30" 
+                height="30" 
+                viewBox="0 0 24.00 24.00" 
+                fill="none" 
+                xmlns="http://www.w3.org/2000/svg"
+                className="social-icon"
+            >
+                <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                <g id="SVGRepo_iconCarrier"> 
+                <path d="M7 8L3 11.6923L7 16M17 8L21 11.6923L17 16M14 4L10 20" stroke="#0579C3" stroke-width="1.32" stroke-linecap="round" stroke-linejoin="round"></path>
+                </g>
+            </svg>
+
 
             <svg 
                 width="28" 

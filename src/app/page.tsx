@@ -5,6 +5,7 @@ import Main from '@/components/Main'
 import About from '@/components/About'
 import Contact from '@/components/Contact'
 import Projects from '@/components/Projects'
+import Experience from '@/components/Experience'
 
 export default function Home() {
   return (
@@ -13,6 +14,7 @@ export default function Home() {
       <RightNav/>
       <Main/>
       <About/>
+      <Experience/>
       <Projects/>
       <Contact/>
     </main>
