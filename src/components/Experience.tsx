@@ -45,7 +45,7 @@ export default function Experience () {
     ]
 
     return (
-        <section className="w-full min-h-screen flex flex-col gap-20 items-center justify-center">
+        <section className={`w-full min-h-screen flex flex-col gap-20 items-center justify-center bg-red-300`}>
           <h1 className="text-4xl font-bold text-center text-white flex flex-row gap-x-3 items-center">
             <span>My Experience</span>
             <svg 

@@ -1,5 +1,7 @@
+import Link from 'next/link'
+
 export default function About() {
-    const tech = ['Java', 'TypeScript', 'Apollo-GraphQL', 'React & Redux', 'Angular', 'Fastify', 'NodeJS & Express', 'SQL & No-SQL', 'Linux', 'Unit & Integration Testing','Azure', 'Material UI', 'Web Sockets']
+    const tech = ['Java', 'TypeScript', 'Apollo-GraphQL', 'React & Redux', 'Angular', 'Fastify', 'NodeJS & Express', 'SQL & No-SQL Databases', 'Linux shell', 'Unit & Integration Testing','Azure', 'Material UI', 'Web Sockets', 'Redis']
     return (
         <section className="w-full h-screen flex items-center justify-center">
             <div className="w-6/12 text-primary flex flex-col justify-center p-6 gap-y-4">
@@ -23,7 +25,15 @@ export default function About() {
                         </g> </g>
                     </svg>
                 </h1>
-                <p className="">I guess if youre reading this, you want to know more about me. Well, I'm a software engineer and quality assurance tester. I build accessible, inclusive digital products and create eccentric, unique and captivating web experiences.</p>
+                <p className="text-center">
+                    Hello! My name is Folarin Raphael, also known as <span className="text-secondary">Suei</span>. I am a FullStack software developer, Quality Assurance Tester and an Open Source Enthusiast. 
+                </p>
+                <p className="text-center">
+                    I may or may not have written my first line of code in 2019. Since then, i have explored some of the most pronounced tech niches before realizing my passion for building web applications. I have had the privilege of working with some amazing teams and companies including <Link href={''}>a startup</Link>, <Link href={''}>an agri-tech company</Link> and <Link href={''}>a non-profit organization. </Link>
+                </p>
+                <p className="text-center">
+                    I am a self-taught developer with a strong passion for learning and bringing ideas to life. When I am not writing code, I am either binging new Netflix series or endlessly scrolling through StackOverflow.
+                </p>
                 <div className="flex flex-row flex-wrap gap-x-3 gap-y-3 justify-center">
                         {tech.map((item, index) => {
                             return (

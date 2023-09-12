@@ -1,4 +1,4 @@
-export default function ProjectCards({ projects }: { projects: any }) {
+export default function ProjectCards({ projects, className }: { projects?: any, className?: string }) {
     return (
         <div>
             {

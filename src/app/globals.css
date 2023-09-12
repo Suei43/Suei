@@ -38,15 +38,12 @@ scroll-behavior: smooth;
 .kite .active {
     transform: rotate(180deg);
 }
-.main-btn{
-
-}
 .main-btn:active {
     background-color: #ffffff30;
     outline: none;
 }
 .main-btn:before {
-    background-color: red;
+    background-color: #0579C320;
     content: '';
     position: absolute;
     bottom: 0;
@@ -54,7 +51,7 @@ scroll-behavior: smooth;
     right: 100%;
     top: 0;
     z-index: -1;
-    transition: right 0.55s ease-out;
+    transition: right 0.65s ease-out;
 }
 .main-btn:hover:before {
     right: 0;

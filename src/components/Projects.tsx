@@ -38,7 +38,7 @@ export default function Projects() {
         }
     ]
     return (
-        <section className="w-full h-fit flex flex-col items-center justify-center gap-y-10">
+        <section className={`w-full h-fit flex flex-col items-center justify-center gap-y-10`}>
             <h1 className="text-2xl font-bold text-white flex flex-row items-center justify-center gap-x-2">
                 <span>Here are some projects I've worked on</span>
                 <svg 
