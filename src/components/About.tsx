@@ -3,8 +3,8 @@ import Link from 'next/link'
 export default function About() {
     const tech = ['Java', 'TypeScript', 'Apollo-GraphQL', 'React & Redux', 'Angular', 'Fastify', 'NodeJS & Express', 'SQL & No-SQL Databases', 'Linux shell', 'Unit & Integration Testing','Azure', 'Material UI', 'Web Sockets', 'Redis']
     return (
-        <section className="w-full h-screen flex items-center justify-center">
-            <div className="w-6/12 text-primary flex flex-col justify-center p-6 gap-y-4">
+        <section className=" w-screen md:w-full h-fit md:h-screen flex items-center justify-center">
+            <div className=" w-9/12 md:w-6/12 text-primary flex flex-col justify-center p-6 gap-y-4 text-xs md:text-md">
                 <h1 className="text-3xl font-bold text-white flex flex-row justify-center items-center gap-x-4">
                     <span>About Me</span>
                     <svg 

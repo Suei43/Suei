@@ -55,13 +55,13 @@ export default function Experience () {
       },
       {
         id: 5,
-        company: "Google Developer Student Community",
+        company: "Google Developers Student Community",
         title: "Core Team Member",
         range: "Aug 2023",
         url: "",
         btn: 5,
         description: [
-          "Actively engaged the student community by hosting events and talk sessions",]
+          "Actively engaging the student community by hosting events and talk sessions",]
       },
       {
         id: 6,
@@ -78,7 +78,7 @@ export default function Experience () {
     ]
 
     return (
-        <section className={`w-full h-screen flex flex-col gap-20 items-center justify-center`}>
+        <section className={`w-full h-fit md:h-screen flex flex-col gap-20 items-center justify-center`}>
           <h1 className="text-4xl font-bold text-center text-white flex flex-row gap-x-3 items-center">
             <span>My Experience</span>
             <svg 

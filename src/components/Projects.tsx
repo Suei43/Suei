@@ -1,5 +1,6 @@
 "use client"
 import cloudwave from '@/assets/cloudwave.png'
+import cybtracy from '@/assets/cybtracy.png'
 import raphaelly from '@/assets/raphaelly.png'
 import Image from 'next/image'
 import { Fragment, useState } from 'react'
@@ -7,6 +8,8 @@ import ProjectCards from './ProjectCards'
 
 export default function Projects() {
     const [viewMore, setViewMore] = useState(false)
+    const [activeIndex, setActiveIndex] = useState(-1) 
+
 
     const handleViewMore = (e:any) => {
         e.preventDefault()
@@ -32,8 +35,17 @@ export default function Projects() {
             git: "https://github.com/Suei43/imagevision"
         },
         {
-            name: "Raphaelly Editorials Services",
+            name: "Cybtracy",
             id: 3,
+            description: "The official website for Cybtracy, a non-profit organization that aims to provide digital literacy to children in underserved communities.",
+            tech: ["Next JS", "TypeScript", "Framer Motion"],
+            link: "https://cybtracy.com/",
+            image: cybtracy,
+            git: "https://github.com/Cybtracy/webapp-frontend"
+        },
+        {
+            name: "Raphaelly Editorials Services",
+            id: 4,
             description: "The official website for Raphaelly Editorials, an organization focused on project research and marketing consultancy.",
             tech: ["JavaScript", "Tailwind CSS", "Django", "PostgreSQL", "AWS S3"],
             link: "https://raphaellyeditorial.netlify.app/",
@@ -56,16 +68,16 @@ export default function Projects() {
                     <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
                     <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
                     <g id="SVGRepo_iconCarrier"> 
-                    <path d="M7 8L3 11.6923L7 16M17 8L21 11.6923L17 16M14 4L10 20" stroke="#dae6e2" strokeWidth="1.32" stroke-linecap="round" stroke-linejoin="round"></path>
+                    <path d="M7 8L3 11.6923L7 16M17 8L21 11.6923L17 16M14 4L10 20" stroke='#8892b0' strokeWidth="1.32" stroke-linecap="round" stroke-linejoin="round"></path>
                     </g>
                 </svg>
             </h1>
             <div className="w-7/12 flex flex-col items-center gap-y-10">
                 {projects.map((item) => {
-                    return <div className={`p-4 ${ !item.image ? 'w-7/12' : 'w-fit' } border border-primary flex flex-row relative items-center`} key={item.id}>
+                    return <div className={`p-4 rounded-lg ${ !item.image ? 'w-7/12' : 'w-fit' } border border-primary flex flex-row relative items-center`} key={item.id}>
                         { item.image && <Image src={item.image} alt={item.name} width={300} className=''/> }
                         <div className={`${ item.image && 'w-7/12' } p-4 flex flex-col gap-y-3`}>
-                            <h2 className="text-secondary font-semibold text-xl flex flex-row justify-between items-center">
+                            <h2 className="text-secondary font-black text-xl flex flex-row justify-between items-center">
                                 {item.name}
                                 <div className="flex flex-row items-center justify-center gap-x-3">
                                     <a href={item.git}>
@@ -75,11 +87,13 @@ export default function Projects() {
                                             height="18"
                                             viewBox="0 0 24 24"
                                             fill="none"
-                                            stroke="#8892b0"
+                                            stroke={ activeIndex === 0 ? '#0579C3' : '#8892b0' }
                                             strokeWidth="2"
                                             strokeLinecap="round"
                                             strokeLinejoin="round"
                                             className="social-icon"
+                                            onMouseEnter={() => setActiveIndex(0)}
+                                            onMouseLeave={() => setActiveIndex(-1)}
                                         >
                                             <path
                                                 d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"
@@ -87,25 +101,23 @@ export default function Projects() {
                                         </svg>
                                     </a>
                                     <a href={item.link}>
-                                        <svg 
-                                            width="20" 
-                                            height="20" 
-                                            viewBox="0 0 24 24" 
-                                            version="1.1" 
-                                            xmlns="http://www.w3.org/2000/svg" 
-                                            xmlnsXlink="http://www.w3.org/1999/xlink" 
-                                            fill="none"><g id="SVGRepo_bgCarrier" strokeWidth="0"></g>
-                                            <g id="SVGRepo_tracerCarrier" strokeLinecap="round" strokeLinejoin="round"></g>
-                                            <g id="SVGRepo_iconCarrier"> <title></title> 
-                                            <g fill="none" fill-rule="evenodd" id="页面-1" strokeWidth="1.8"> 
-                                            <g id="导航图标" stroke="#8892b0" strokeWidth="1.8" transform="translate(-177.000000, -334.000000)"> 
-                                            <g id="官方网站" transform="translate(177.000000, 334.000000)"> 
-                                            <g id="编组" transform="translate(3.000000, 4.000000)"> 
-                                            <rect height="4.5" id="矩形" strokeLinecap="round" strokeLinejoin="round" width="5" x="7" y="12"></rect> 
-                                            <rect height="12" id="矩形" rx="1" width="19" x="0" y="0"></rect> 
-                                            <line id="路径" strokeLinecap="round" strokeLinejoin="round" x1="8.5" x2="10.5" y1="9.5" y2="9.5"></line> 
-                                            <line id="路径" strokeLinecap="round" strokeLinejoin="round" x1="4.5" x2="14.5" y1="16.5" y2="16.5"></line> 
-                                            </g> </g> </g> </g> </g>
+                                        <svg
+                                            xmlns="http://www.w3.org/2000/svg"
+                                            width="21"
+                                            height="21"
+                                            viewBox="0 0 24 24"
+                                            fill="none"
+                                            stroke={ activeIndex === 1 ? '#0579C3' : '#8892b0' }
+                                            strokeWidth="2"
+                                            stroke-linecap="round"
+                                            stroke-linejoin="round"
+                                            className="social-icon"
+                                            onMouseEnter={() => setActiveIndex(1)}
+                                            onMouseLeave={() => setActiveIndex(-1)}
+                                        >
+                                            <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" />
+                                            <polyline points="15 3 21 3 21 9" />
+                                            <line x1="10" y1="14" x2="21" y2="3" />
                                         </svg>
                                     </a>
                                 </div>

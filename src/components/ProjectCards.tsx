@@ -1,16 +1,21 @@
+"use client"
+import { useState } from "react"
+
 export default function ProjectCards() {
+    const [viewMore, setViewMore] = useState(false)
+    const [activeIndex, setActiveIndex] = useState('') 
+    const [iteration, setIteration] = useState(1)
+
+
+    const handleViewMore = (e:any) => {
+        e.preventDefault()
+        setViewMore(!viewMore)
+    }
+
     const projects = [
         {
-            name: "Raphaelly Editorials Services",
-            id: 1,
-            description: "The official website for Raphaelly Editorials.",
-            tech: ["JavaScript", "Tailwind CSS", "Django", "PostgreSQL", "AWS S3"],
-            link: "https://raphaellyeditorial.netlify.app/",
-            git: "https://github.com/Suei43/raphaellyeditorials"
-        },
-        {
             name: "Uchegbu Family Tree",
-            id: 2,
+            id: 1,
             description: "Edit and explore your family tree.",
             tech: ["JavaScript", "D3 JS", "Mongo DB", "Node JS"],
             link: "https://uchegbu-family-tree.onrender.com/",
@@ -18,7 +23,7 @@ export default function ProjectCards() {
         },
         {
             name: "X profile",
-            id: 3,
+            id: 2,
             description: "An X(twitter) profile card list.",
             tech: ["Next JS", "React", "FireBase", "PostgreSQL"],
             link: "https://x.hellofaizan.me/",
@@ -26,7 +31,7 @@ export default function ProjectCards() {
         },
         {
             name: "Studera AI",
-            id: 4,
+            id: 3,
             description: "A personalized exam preparation platform",
             tech: ["Angular", "Redis", "TypeScript", "MongoDB"],
             link: "https://studera.onrender.com",
@@ -34,7 +39,7 @@ export default function ProjectCards() {
         },
         {
             name: "My Portfolio v1",
-            id: 5,
+            id: 4,
             description: "First version of my portfolio website",
             tech: ["TypeScript", "Next JS", "Tailwind CSS"],
             link: "https://suei.onrender.com",
@@ -47,7 +52,9 @@ export default function ProjectCards() {
             {
                 projects.map((project:any) => {
                     return (
-                        <div className="w-60 h-60 h-fit border-2 rounded-lg border-primary p-4 box-border flex flex-col gap-y-4 proj-card">
+                        <div className="w-60 h-60 h-fit border-2 rounded-lg border-primary p-4 box-border flex flex-col gap-y-4 proj-card"
+                        key={project.id}
+                        >
                             <div className="flex flex-row items-center justify-end gap-x-3 w-full">
                                     <a href={project.git}>
                                         <svg
@@ -56,11 +63,14 @@ export default function ProjectCards() {
                                             height="18"
                                             viewBox="0 0 24 24"
                                             fill="none"
-                                            stroke="#8892b0"
+                                            id={project.id}
+                                            stroke={ activeIndex === String(project.id)+1 ? '#0579C3' : '#8892b0' }
                                             strokeWidth="2"
                                             strokeLinecap="round"
                                             strokeLinejoin="round"
                                             className="social-icon"
+                                            onMouseEnter={() => setActiveIndex(String(project.id)+0)}
+                                            onMouseLeave={() => setActiveIndex('')}
                                         >
                                             <path
                                                 d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"
@@ -68,25 +78,23 @@ export default function ProjectCards() {
                                         </svg>
                                     </a>
                                     <a href={project.link}>
-                                        <svg 
-                                            width="20" 
-                                            height="20" 
-                                            viewBox="0 0 24 24" 
-                                            version="1.1" 
-                                            xmlns="http://www.w3.org/2000/svg" 
-                                            xmlnsXlink="http://www.w3.org/1999/xlink" 
-                                            fill="none"><g id="SVGRepo_bgCarrier" strokeWidth="0"></g>
-                                            <g id="SVGRepo_tracerCarrier" strokeLinecap="round" strokeLinejoin="round"></g>
-                                            <g id="SVGRepo_iconCarrier"> <title></title> 
-                                            <g fill="none" fill-rule="evenodd" id="页面-1" strokeWidth="1.8"> 
-                                            <g id="导航图标" stroke="#8892b0" strokeWidth="1.8" transform="translate(-177.000000, -334.000000)"> 
-                                            <g id="官方网站" transform="translate(177.000000, 334.000000)"> 
-                                            <g id="编组" transform="translate(3.000000, 4.000000)"> 
-                                            <rect height="4.5" id="矩形" strokeLinecap="round" strokeLinejoin="round" width="5" x="7" y="12"></rect> 
-                                            <rect height="12" id="矩形" rx="1" width="19" x="0" y="0"></rect> 
-                                            <line id="路径" strokeLinecap="round" strokeLinejoin="round" x1="8.5" x2="10.5" y1="9.5" y2="9.5"></line> 
-                                            <line id="路径" strokeLinecap="round" strokeLinejoin="round" x1="4.5" x2="14.5" y1="16.5" y2="16.5"></line> 
-                                            </g> </g> </g> </g> </g>
+                                        <svg
+                                            xmlns="http://www.w3.org/2000/svg"
+                                            width="21"
+                                            height="21"
+                                            viewBox="0 0 24 24"
+                                            fill="none"
+                                            stroke={ activeIndex === String(project.id)+1 ? '#0579C3' : '#8892b0' }
+                                            strokeWidth="2"
+                                            stroke-linecap="round"
+                                            stroke-linejoin="round"
+                                            className="social-icon"
+                                            onMouseEnter={() => setActiveIndex(String(project.id)+1)}
+                                            onMouseLeave={() => setActiveIndex('')}
+                                        >
+                                            <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" />
+                                            <polyline points="15 3 21 3 21 9" />
+                                            <line x1="10" y1="14" x2="21" y2="3" />
                                         </svg>
                                     </a>
                                 </div>

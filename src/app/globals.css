@@ -7,10 +7,13 @@
     color: #FCFBFC;
     font-family: 'Chakra Petch', sans-serif;
     overflow-x: hidden;
+    box-sizing: border-box;
     scroll-behavior: smooth;
 }
 html {
 scroll-behavior: smooth;
+box-sizing: border-box;
+overflow-x: hidden;
 }
 .nav-right-top {
     border-left: 1px solid #8892b0;
@@ -27,10 +30,11 @@ scroll-behavior: smooth;
 }
 .social-icon {
     cursor: pointer;
-    transition: all 0.3s ease-in-out;
+    transition: all 0.25s ease-in-out;
 }
 .social-icon:hover {
     stroke: '#0579C3' !important;
+    transform: scale(1.05);
 }
 .kite {
     transform: rotate(45deg);
@@ -61,4 +65,10 @@ scroll-behavior: smooth;
     transform: scale(1.05);
     transition: all 0.3s ease-in-out;
     cursor: pointer;
+}
+
+@media (max-width:768px) {
+    .full-h{
+        height: 100vh;
+    }
 }

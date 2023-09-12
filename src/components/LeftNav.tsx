@@ -3,10 +3,10 @@ import { useEffect, useState } from "react"
 
 
 export default function LeftNav(){
-    const [activeIndex, setActiveIndex] = useState(-1)
+    const [activeIndex, setActiveIndex] = useState(-1) 
 
     return (
-        <div className="h-screen w-16 flex flex-col-reverse nav-left fixed left-0 top-0 z-10">
+        <div className={`h-screen w-12 md:w-16 flex flex-col-reverse nav-left fixed left-0 top-0 z-10`}>
             <div className="w-full flex flex-col items-center justify-center gap-y-10 py-12">
                 <a href="https://discordapp.com/users/sueii">
                     <svg 
