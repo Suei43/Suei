@@ -9,9 +9,11 @@ export default function Intro(){
             <h1 className="text-7xl text-white font-black ">Folarin Raphael.</h1>
             <h2 className="text-secondary">SOFTWARE ENGINEER | QUALITY ASSURANCE TESTER</h2>
             <p className="w-8/12">I build accessible, inclusive digital products and create eccentric, unique and captivating web experiences.</p>
-            <button onClick={handleResumeClick} className="text-secondary border border-secondary py-3 w-40 rounded-md mt-5">
-                Résumé
-            </button>
+            <div className="relative w-fit h-fit mt-5 rounded-lg">
+                <button onClick={handleResumeClick} className="text-secondary border-2 border-secondary rounded-md py-3 w-40 main-btn">
+                    Résumé
+                </button>
+            </div>
         </div>
     )
 }
