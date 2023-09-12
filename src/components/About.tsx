@@ -5,7 +5,7 @@ export default function About() {
     return (
         <section className="w-full h-screen flex items-center justify-center">
             <div className="w-6/12 text-primary flex flex-col justify-center p-6 gap-y-4">
-                <h1 className="text-2xl font-bold text-white flex flex-row justify-center items-center gap-x-4">
+                <h1 className="text-3xl font-bold text-white flex flex-row justify-center items-center gap-x-4">
                     <span>About Me</span>
                     <svg 
                         fill="#8892b0" 
@@ -26,7 +26,7 @@ export default function About() {
                     </svg>
                 </h1>
                 <p className="text-center">
-                    Hello! My name is Folarin Raphael, also known as <span className="text-secondary">Suei</span>. I am a FullStack software developer, Quality Assurance Tester and an Open Source Enthusiast. 
+                    Hello! My name is Folarin Raphael, also known as <span className="text-secondary">Suei</span>. I am a <span className='text-white font-medium'>FullStack Software developer</span>, <span className='text-white font-medium'>Quality Assurance Tester</span> and an <span className='text-white font-medium'>Open Source Enthusiast</span>. 
                 </p>
                 <p className="text-center">
                     I may or may not have written my first line of code in 2019. Since then, i have explored some of the most pronounced tech niches before realizing my passion for building web applications. I have had the privilege of working with some amazing teams and companies including <Link href={''}>a startup</Link>, <Link href={''}>an agri-tech company</Link> and <Link href={''}>a non-profit organization. </Link>
@@ -34,6 +34,7 @@ export default function About() {
                 <p className="text-center">
                     I am a self-taught developer with a strong passion for learning and bringing ideas to life. When I am not writing code, I am either binging new Netflix series or endlessly scrolling through StackOverflow.
                 </p>
+                <h3 className='text-secondary text-center'>Here's a list of some of the technologies I use,</h3>
                 <div className="flex flex-row flex-wrap gap-x-3 gap-y-3 justify-center">
                         {tech.map((item, index) => {
                             return (

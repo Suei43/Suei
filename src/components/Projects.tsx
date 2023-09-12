@@ -2,11 +2,15 @@
 import cloudwave from '@/assets/cloudwave.png'
 import raphaelly from '@/assets/raphaelly.png'
 import Image from 'next/image'
+import { Fragment, useState } from 'react'
+import ProjectCards from './ProjectCards'
 
 export default function Projects() {
+    const [viewMore, setViewMore] = useState(false)
 
     const handleViewMore = (e:any) => {
         e.preventDefault()
+        setViewMore(!viewMore)
     }
     const projects = [
         {
@@ -21,16 +25,16 @@ export default function Projects() {
         {
             name: "Image Vision API",
             id: 2,
-            description: "An Image recognition API powered by TensorflowJS pre-trained models.",
+            description: "An image classification API for recognizing and classifying objects in images at a large scale using artificial intelligence models.",
             tech: ["TypeScript", "Fastify", "TypeORM", "Tensorflow JS", "Mongo DB", "Swagger"],
             link: "https://image-vision-api.onrender.com/",
-            image: cloudwave,
+            image: '',
             git: "https://github.com/Suei43/imagevision"
         },
         {
             name: "Raphaelly Editorials Services",
             id: 3,
-            description: "The official website for Raphaelly Editorials, an organization focused on project, research and marketing consultancy.",
+            description: "The official website for Raphaelly Editorials, an organization focused on project research and marketing consultancy.",
             tech: ["JavaScript", "Tailwind CSS", "Django", "PostgreSQL", "AWS S3"],
             link: "https://raphaellyeditorial.netlify.app/",
             image: raphaelly,
@@ -56,11 +60,11 @@ export default function Projects() {
                     </g>
                 </svg>
             </h1>
-            <div className="w-7/12 flex flex-col gap-y-10">
+            <div className="w-7/12 flex flex-col items-center gap-y-10">
                 {projects.map((item) => {
-                    return <div className='p-4 w-full border border-primary flex flex-row relative items-center' key={item.id}>
-                        <Image src={item.image} alt={item.name} width={300} className=''/>
-                        <div className="w-7/12 p-4 flex flex-col gap-y-3">
+                    return <div className={`p-4 ${ !item.image ? 'w-7/12' : 'w-fit' } border border-primary flex flex-row relative items-center`} key={item.id}>
+                        { item.image && <Image src={item.image} alt={item.name} width={300} className=''/> }
+                        <div className={`${ item.image && 'w-7/12' } p-4 flex flex-col gap-y-3`}>
                             <h2 className="text-secondary font-semibold text-xl flex flex-row justify-between items-center">
                                 {item.name}
                                 <div className="flex flex-row items-center justify-center gap-x-3">
@@ -118,10 +122,16 @@ export default function Projects() {
                     </div>
                 })}
             </div>
-            <button className="py-2.5 rounded-sm px-14 border border-primary mt-2 text-white" onClick={
+            { viewMore && 
+            <div className='flex flex-row items-center w-10/12 justify-center gap-y-8'>
+                <h3 className="text-white text-lg w-4/12 text-center">Here's a list of other projects I've worked on, including my open source contributions.</h3>
+                <ProjectCards/> 
+            </div>
+            }
+            <button className="py-2.5 rounded-sm px-14 border border-primary text-white main-btn" onClick={
                 (e) => handleViewMore(e)
             }>
-                View More
+                View <span>{ viewMore ? 'Less' : 'More' }</span>
             </button>
         </section>
     )
