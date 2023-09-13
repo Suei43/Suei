@@ -43,7 +43,7 @@ export default function ProjectCards() {
             description: "First version of my portfolio website",
             tech: ["TypeScript", "Next JS", "Tailwind CSS"],
             link: "https://suei.onrender.com",
-            git: "https://github.com/darksuei/Suei"
+            git: "https://github.com/darksuei/suei"
         },
     ]
 
