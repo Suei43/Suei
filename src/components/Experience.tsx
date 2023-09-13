@@ -79,7 +79,7 @@ export default function Experience () {
 
     return (
         <section className={`w-full h-fit md:h-screen flex flex-col gap-20 items-center justify-center`}>
-          <h1 className="text-4xl font-bold text-center text-white flex flex-row gap-x-3 items-center">
+          <h1 className="text-3xl md:text-4xl font-bold text-center text-white flex flex-row gap-x-3 items-center">
             <span>My Experience</span>
             <svg 
                 width="32" 
@@ -96,7 +96,7 @@ export default function Experience () {
                 </g>
             </svg>
           </h1>
-            <main className="w-9/12 flex flex-row justify-center items-center h-2/6 gap-x-10 text-primary">
+            <main className="w-10/12 flex flex-row justify-center items-center h-2/6 gap-x-7 md:gap-x-10 text-primary">
               <div className="flex flex-col">
                 {experience.map((item) => {
                   return (
@@ -114,20 +114,20 @@ export default function Experience () {
                   )
                 })}
               </div>
-              <div className="w-6/12">
+              <div className="w-11/12 md:w-6/12">
                 {experience.map((item) => {
                   return(
                     <div key={item.id} className={`border border-primary p-4 relative flex flex-col gap-y-3 ${active === item.id ? 'block' : 'hidden'}`}>
                       <h1 className="text-secondary text-xl font-semibold">{item.title}</h1>
                       <h3 className="text-sm">{item.company}</h3>
-                      <p className="absolute right-4 top-5 text-xs">{item.range.toUpperCase()}</p>
                       <span className="flex flex-col gap-y-3 p-2">
                         { item.description.map((i) => {
                           return (
                             <p className="text-sm">{i}</p>
-                          )
-                        })}
+                            )
+                          })}
                       </span>
+                          <p className="w-full text-right text-xs">{item.range.toUpperCase()}</p>
                     </div>
                   )
                 })}

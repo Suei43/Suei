@@ -23,7 +23,7 @@ export default function Projects() {
             tech: ["React", "Node JS", "Mega JS", "Craco", "Million JS", "Docker"],
             link: "https://cloud-wave-x9iy.onrender.com/",
             image: cloudwave,
-            git: "https://github.com/Suei43/cloudwave"
+            git: "https://github.com/darksuei/cloudwave"
         },
         {
             name: "Image Vision API",
@@ -32,7 +32,7 @@ export default function Projects() {
             tech: ["TypeScript", "Fastify", "TypeORM", "Tensorflow JS", "Mongo DB", "Swagger"],
             link: "https://image-vision-api.onrender.com/",
             image: '',
-            git: "https://github.com/Suei43/imagevision"
+            git: "https://github.com/darksuei/imagevision"
         },
         {
             name: "Cybtracy",
@@ -50,13 +50,13 @@ export default function Projects() {
             tech: ["JavaScript", "Tailwind CSS", "Django", "PostgreSQL", "AWS S3"],
             link: "https://raphaellyeditorial.netlify.app/",
             image: raphaelly,
-            git: "https://github.com/Suei43/raphaellyeditorials"
+            git: "https://github.com/darksuei/raphaellyeditorials"
         }
     ]
     return (
-        <section className={`w-full h-fit flex flex-col items-center justify-center gap-y-10`}>
-            <h1 className="text-2xl font-bold text-white flex flex-row items-center justify-center gap-x-2">
-                <span>Here are some projects I've worked on</span>
+        <section className={`w-full h-fit flex flex-col items-center justify-center gap-y-10 mt-32 md:mt-0`}>
+            <h1 className="w-10/12 text-xl font-bold text-white flex flex-row items-center justify-center gap-x-0 md:gap-x-2">
+                <span className='w-fit text-center'>Here are some major projects I've worked on</span>
                 <svg 
                     width="30" 
                     height="30" 
@@ -72,11 +72,11 @@ export default function Projects() {
                     </g>
                 </svg>
             </h1>
-            <div className="w-7/12 flex flex-col items-center gap-y-10">
+            <div className="w-10/12 md:w-7/12 flex flex-col items-center gap-y-10">
                 {projects.map((item) => {
-                    return <div className={`p-4 rounded-lg ${ !item.image ? 'w-7/12' : 'w-fit' } border border-primary flex flex-row relative items-center`} key={item.id}>
+                    return <div className={`p-4 rounded-lg ${ !item.image ? 'w-fit md:w-7/12' : 'w-fit' } border border-primary flex flex-col gap-y-4 md:gap-y-0 md:flex-row relative items-center`} key={item.id}>
                         { item.image && <Image src={item.image} alt={item.name} width={300} className=''/> }
-                        <div className={`${ item.image && 'w-7/12' } p-4 flex flex-col gap-y-3`}>
+                        <div className={`${ item.image && ' w-full md:w-7/12' } p-0 md:p-4 flex flex-col gap-y-3`}>
                             <h2 className="text-secondary font-black text-xl flex flex-row justify-between items-center">
                                 {item.name}
                                 <div className="flex flex-row items-center justify-center gap-x-3">
@@ -135,8 +135,8 @@ export default function Projects() {
                 })}
             </div>
             { viewMore && 
-            <div className='flex flex-row items-center w-10/12 justify-center gap-y-8'>
-                <h3 className="text-white text-lg w-4/12 text-center">Here's a list of other projects I've worked on, including my open source contributions.</h3>
+            <div className='flex flex-col md:flex-row items-center w-10/12 justify-center gap-y-8'>
+                <h3 className="text-white text-base w-11/12 md:w-4/12 md:text-center">And here's a list of other projects I've worked on, including my open source contributions.</h3>
                 <ProjectCards/> 
             </div>
             }

@@ -6,8 +6,8 @@ export default function LeftNav(){
     const [activeIndex, setActiveIndex] = useState(-1) 
 
     return (
-        <div className={`h-screen w-12 md:w-16 flex flex-col-reverse nav-left fixed left-0 top-0 z-10`}>
-            <div className="w-full flex flex-col items-center justify-center gap-y-10 py-12">
+        <div className={`w-12 md:w-16 flex flex-col-reverse nav-left absolute md:fixed box-border left-0 top-0 z-10`}>
+            <div className="w-full flex flex-col items-center justify-center gap-y-10 py-24 md:py-12">
                 <a href="https://discordapp.com/users/sueii">
                     <svg 
                         width="28" 
@@ -29,7 +29,7 @@ export default function LeftNav(){
                     </svg>
                 </a>
 
-                <a href="https://github.com/Suei43">
+                <a href="https://github.com/darksuei">
                     <svg
                         xmlns="http://www.w3.org/2000/svg"
                         width="20"
@@ -50,7 +50,7 @@ export default function LeftNav(){
                     </svg>
                 </a>
 
-                <a href="https://instagram.com/darknav">
+                <a href="https://instagram.com/darksuei">
                     <svg
                         xmlns="http://www.w3.org/2000/svg"
                         width="20"

@@ -1,6 +1,6 @@
 export default function RightNav(){
     return (
-        <div className="h-screen w-14 flex flex-col items-end justify-center fixed right-0 top-0 z-10">
+        <div className="nav-right w-14 md:flex flex-col items-end justify-center absolute hidden md:fixed right-0 top-0 z-10">
             <div className="nav-right-top"></div>
             <nav className="w-full flex flex-col items-center justify-center gap-y-14 py-12">
                 <svg 

@@ -11,9 +11,12 @@
     scroll-behavior: smooth;
 }
 html {
-scroll-behavior: smooth;
-box-sizing: border-box;
-overflow-x: hidden;
+    scroll-behavior: smooth;
+    box-sizing: border-box;
+    overflow-x: hidden;
+}
+.nav-right {
+    height: 100%;
 }
 .nav-right-top {
     border-left: 1px solid #8892b0;
@@ -27,6 +30,7 @@ overflow-x: hidden;
 }
 .nav-left {
     border-right: 1px solid #8892b0;
+    height: 100%;
 }
 .social-icon {
     cursor: pointer;
@@ -70,5 +74,13 @@ overflow-x: hidden;
 @media (max-width:768px) {
     .full-h{
         height: 100vh;
+    }
+    .nav-right-top {
+        height: 17.5%;
+    }
+    .nav-right-bottom {
+        border-left: 1px solid #8892b0;
+        height: 17.5%;
+        width: 50%;
     }
 }

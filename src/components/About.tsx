@@ -3,8 +3,8 @@ import Link from 'next/link'
 export default function About() {
     const tech = ['Java', 'TypeScript', 'Apollo-GraphQL', 'React & Redux', 'Angular', 'Fastify', 'NodeJS & Express', 'SQL & No-SQL Databases', 'Linux shell', 'Unit & Integration Testing','Azure', 'Material UI', 'Web Sockets', 'Redis']
     return (
-        <section className=" w-screen md:w-full h-fit md:h-screen flex items-center justify-center">
-            <div className=" w-9/12 md:w-6/12 text-primary flex flex-col justify-center p-6 gap-y-4 text-xs md:text-md">
+        <section className=" w-screen md:w-full h-fit md:h-screen flex items-center justify-center my-20 md:my-0">
+            <div className="w-11/12 md:w-8/12 text-primary flex flex-col justify-center p-6 gap-y-4">
                 <h1 className="text-3xl font-bold text-white flex flex-row justify-center items-center gap-x-4">
                     <span>About Me</span>
                     <svg 
@@ -25,16 +25,16 @@ export default function About() {
                         </g> </g>
                     </svg>
                 </h1>
-                <p className="text-center">
+                <p className="text-center text-base">
                     Hello! My name is Folarin Raphael, also known as <span className="text-secondary">Suei</span>. I am a <span className='text-white font-medium'>FullStack Software developer</span>, <span className='text-white font-medium'>Quality Assurance Tester</span> and an <span className='text-white font-medium'>Open Source Enthusiast</span>. 
                 </p>
-                <p className="text-center">
+                <p className="text-center text-base">
                     I may or may not have written my first line of code in 2019. Since then, i have explored some of the most pronounced tech niches before realizing my passion for building web applications. I have had the privilege of working with some amazing teams and companies including <Link href={''}>a startup</Link>, <Link href={''}>an agri-tech company</Link> and <Link href={''}>a non-profit organization. </Link>
                 </p>
-                <p className="text-center">
+                <p className="text-center text-base">
                     I am a self-taught developer with a strong passion for learning and bringing ideas to life. When I am not writing code, I am either binging new Netflix series or endlessly scrolling through StackOverflow.
                 </p>
-                <h3 className='text-secondary text-center'>Here's a list of some of the technologies I use,</h3>
+                <h3 className='text-secondary text-center italic'>Here's a list of some of the technologies I use,</h3>
                 <div className="flex flex-row flex-wrap gap-x-3 gap-y-3 justify-center">
                         {tech.map((item, index) => {
                             return (

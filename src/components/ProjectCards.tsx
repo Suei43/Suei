@@ -19,7 +19,7 @@ export default function ProjectCards() {
             description: "Edit and explore your family tree.",
             tech: ["JavaScript", "D3 JS", "Mongo DB", "Node JS"],
             link: "https://uchegbu-family-tree.onrender.com/",
-            git: "https://github.com/Suei43/family-tree"
+            git: "https://github.com/darksuei/family-tree"
         },
         {
             name: "X profile",
@@ -35,7 +35,7 @@ export default function ProjectCards() {
             description: "A personalized exam preparation platform",
             tech: ["Angular", "Redis", "TypeScript", "MongoDB"],
             link: "https://studera.onrender.com",
-            git: "https://github.com/Suei43/studera-AI"
+            git: "https://github.com/darksuei/studera-AI"
         },
         {
             name: "My Portfolio v1",
@@ -43,7 +43,7 @@ export default function ProjectCards() {
             description: "First version of my portfolio website",
             tech: ["TypeScript", "Next JS", "Tailwind CSS"],
             link: "https://suei.onrender.com",
-            git: "https://github.com/Suei43/Suei"
+            git: "https://github.com/darksuei/Suei"
         },
     ]
 

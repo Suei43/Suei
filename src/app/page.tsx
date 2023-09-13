@@ -9,10 +9,12 @@ import Experience from '@/components/Experience'
 
 export default function Home() {
   return (
-    <main className='w-screen flex flex-col'>
-      <LeftNav/>
-      <RightNav/>
-      <Main/>
+    <main className='w-screen flex flex-col box-border'>
+      <div className='relative h-screen w-full box-border'>
+        <LeftNav/>
+        <RightNav/>
+        <Main/>
+      </div>
       <About/>
       <Experience/>
       <Projects/>
