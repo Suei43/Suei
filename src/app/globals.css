@@ -72,6 +72,9 @@ html {
 }
 .loading-img {
   width: 175px;
+  position: absolute;
+  top: -100px;
+  transform: rotateZ(45deg);
 }
 
 @media (max-width: 768px) {
