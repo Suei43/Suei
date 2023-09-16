@@ -1,9 +1,10 @@
 import React, { useState } from "react";
+import Link from "next/link";
 
 const Discord = () => {
   const [active, setActive] = useState(false);
   return (
-    <a href="https://discordapp.com/users/sueii">
+    <Link href="https://discordapp.com/users/sueii">
       <svg
         width="28"
         height="28"
@@ -47,7 +48,7 @@ const Discord = () => {
           ></ellipse>
         </g>
       </svg>
-    </a>
+    </Link>
   );
 };
 

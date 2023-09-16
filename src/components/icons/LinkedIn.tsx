@@ -1,8 +1,10 @@
 import React, { useState } from "react";
+import Link from "next/link";
+
 const LinkedIn = () => {
   const [active, setActive] = useState(false);
   return (
-    <a href="https://www.linkedin.com/in/folarin-raphael">
+    <Link href="https://www.linkedin.com/in/folarin-raphael">
       <svg
         xmlns="http://www.w3.org/2000/svg"
         width="20"
@@ -21,7 +23,7 @@ const LinkedIn = () => {
         <rect x="2" y="9" width="4" height="12"></rect>
         {/* <circle cx="4" cy="4" r="2"></circle> */}
       </svg>
-    </a>
+    </Link>
   );
 };
 
