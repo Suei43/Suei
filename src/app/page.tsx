@@ -10,7 +10,7 @@ import Loading from "./loading";
 import { useState, useEffect, Fragment } from "react";
 
 export default function Home() {
-  const [loading, setLoading] = useState(true);
+  const [loading, setLoading] = useState(false);
 
   useEffect(() => {
     const timerId = setTimeout(() => {
