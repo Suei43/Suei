@@ -14,7 +14,7 @@ export default function Loading() {
     let vh = window.innerHeight;
     let ctx = gsap.context(() => {
       tl.current = gsap.timeline().to(img.current, {
-        y: vh / 2 + 20,
+        y: vh / 2 + 25,
         duration: 1,
         ease: "bounce.out",
       });

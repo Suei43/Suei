@@ -45,7 +45,7 @@ const About = forwardRef((props: any, ref: any) => {
 
   return (
     <section
-      className=" w-screen md:w-full h-fit md:h-screen flex items-center justify-center my-20 md:my-0 panel"
+      className=" w-screen md:w-full h-fit md:h-screen flex items-center justify-center my-20 panel"
       ref={ref}
     >
       <div className="w-11/12 md:w-8/12 text-primary flex flex-col justify-center p-6 gap-y-4">
