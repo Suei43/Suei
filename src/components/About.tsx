@@ -51,7 +51,7 @@ const About = forwardRef((props: any, ref: any) => {
       <div className="w-11/12 md:w-8/12 text-primary flex flex-col justify-center p-6 gap-y-4">
         <h1 className="text-3xl font-bold text-white flex flex-row justify-center items-center gap-x-4">
           <span>About Me</span>
-          <AboutIcon stroke={"#dae6e2"} />
+          <AboutIcon stroke={"#dae6e2"} size={"28"} />
         </h1>
         <p className="text-center text-base el">
           Hello! My name is Folarin Raphael, also known as{" "}

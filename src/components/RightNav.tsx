@@ -8,6 +8,7 @@ export default function RightNav(props: {
   expScrollRef: any;
   projScrollRef: any;
 }) {
+  const width = window.innerWidth;
   useLayoutEffect(() => {
     const ctx: any = gsap.context(() => {
       const tl = gsap.timeline();
@@ -74,20 +75,20 @@ export default function RightNav(props: {
   };
 
   return (
-    <div className="nav-right w-14 md:flex flex-col items-end justify-center absolute hidden md:fixed right-0 top-0 z-10">
+    <div className="nav-right w-11 md:w-14 flex flex-col items-end justify-center fixed right-0 top-0 z-10">
       <div className="nav-right-top"></div>
-      <nav className="w-full flex flex-col items-center justify-center gap-y-14 py-12">
+      <nav className="w-full flex flex-col items-center justify-center gap-y-12 md:gap-y-14 py-12">
         <div className="nav" onClick={(e) => handleScroll(e, "about")}>
-          <AboutIcon stroke={"#8892b0"} />
+          <AboutIcon stroke={"#8892b0"} size={width > 900 ? "22" : "19"} />
         </div>
         <div className="nav" onClick={(e) => handleScroll(e, "exp")}>
-          <Exp />
+          <Exp size={width > 900 ? "28" : "24"} />
         </div>
         <div className="nav" onClick={(e) => handleScroll(e, "proj")}>
-          <Code />
+          <Code size={width > 900 ? "30" : "25"} />
         </div>
         <div className="nav" onClick={(e) => handleScroll(e, "contact")}>
-          <ContactIcon />
+          <ContactIcon size={width > 900 ? "28" : "24"} />
         </div>
       </nav>
       <div className="nav-right-bottom"></div>

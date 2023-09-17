@@ -1,5 +1,6 @@
 "use client";
 import { Fragment, useState, forwardRef } from "react";
+import { Exp } from "./icons";
 
 const Experience = forwardRef((props: any, ref: any) => {
   const [active, setActive] = useState(1);
@@ -80,37 +81,14 @@ const Experience = forwardRef((props: any, ref: any) => {
 
   return (
     <section
-      className={`w-full h-fit md:h-screen flex flex-col gap-20 items-center justify-center`}
+      className={`w-full h-fit md:h-screen flex flex-col gap-10 md:gap-20 items-center justify-center`}
       ref={ref}
     >
       <h1 className="text-3xl md:text-4xl font-bold text-center text-white flex flex-row gap-x-3 items-center">
         <span>My Experience</span>
-        <svg
-          width="32"
-          height="32"
-          viewBox="0 0 24 24"
-          fill="none"
-          xmlns="http://www.w3.org/2000/svg"
-          className="social-icon"
-        >
-          <g id="SVGRepo_bgCarrier" strokeWidth="0"></g>
-          <g
-            id="SVGRepo_tracerCarrier"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-          ></g>
-          <g id="SVGRepo_iconCarrier">
-            <path
-              d="M9 7H5C3.89543 7 3 7.89543 3 9V18C3 19.1046 3.89543 20 5 20H19C20.1046 20 21 19.1046 21 18V9C21 7.89543 20.1046 7 19 7H15M9 7V5C9 3.89543 9.89543 3 11 3H13C14.1046 3 15 3.89543 15 5V7M9 7H15"
-              stroke="#8892b0"
-              stroke-width="1.32"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-            ></path>
-          </g>
-        </svg>
+        <Exp size={"32"} />
       </h1>
-      <main className="w-10/12 flex flex-row justify-center items-center h-2/6 gap-x-7 md:gap-x-10 text-primary">
+      <main className="w-11/12 md:w-10/12 flex flex-row justify-center items-center h-2/6 gap-x-5 md:gap-x-7 md:gap-x-10 text-primary">
         <div className="flex flex-col">
           {experience.map((item) => {
             return (

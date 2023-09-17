@@ -1,8 +1,8 @@
-const Code = () => {
+const Code = (props: { size: string }) => {
   return (
     <svg
-      width="30"
-      height="30"
+      width={props.size}
+      height={props.size}
       viewBox="0 0 24.00 24.00"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"

@@ -35,7 +35,7 @@ export default function LeftNav() {
   }, []);
   return (
     <div
-      className={`w-12 md:w-16 flex flex-col-reverse nav-left absolute md:fixed box-border left-0 top-0 z-10`}
+      className={`w-12 md:w-16 flex-col-reverse nav-left hidden md:flex fixed box-border left-0 top-0 z-10`}
       ref={leftNav}
     >
       <div className="w-full flex flex-col items-center justify-center gap-y-10 py-24 md:py-12">

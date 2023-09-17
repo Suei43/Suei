@@ -91,7 +91,7 @@ const Projects = forwardRef((props: any, ref: any) => {
           </g>
         </svg>
       </h1>
-      <div className="w-11/12 flex flex-row flex-wrap items-center gap-y-10 md:gap-x-10 md:justify-evenly">
+      <div className="w-11/12 p-2 md:p-0 flex flex-row flex-wrap items-center gap-y-10 md:gap-x-10 md:justify-evenly">
         {projects.map((item) => {
           return (
             <div

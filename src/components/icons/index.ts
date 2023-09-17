@@ -8,6 +8,7 @@ import AboutIcon from "./AboutIcon";
 import Exp from "./Exp";
 import Code from "./Code";
 import ContactIcon from "./ContactIcon";
+import Paperplane from "./Paperplane";
 
 export {
   Discord,
@@ -20,4 +21,5 @@ export {
   Exp,
   Code,
   ContactIcon,
+  Paperplane,
 };

@@ -34,7 +34,7 @@ export default function Intro() {
 
   return (
     <div
-      className={`absolute bottom-0 left-0 md:left-16 p-20 h-5/6 md:h-4/6 flex-col gap-y-4 w-full md:w-10/12 text-primary box-border ${
+      className={`absolute bottom-0 left-0 md:left-16 p-8 md:p-20 h-4/6 flex-col gap-y-4 w-full md:w-10/12 text-primary box-border ${
         isVisible ? " flex " : "hidden"
       }`}
     >
@@ -43,10 +43,10 @@ export default function Intro() {
           Folarin Raphael.
         </span>
       </h1>
-      <h2 className="text-secondary text-sm md:text-lg font-semibold el">
-        SOFTWARE DEVELOPER && QA TESTER
+      <h2 className="text-secondary text-sm md:text-lg font-semibold el w-10/12">
+        SOFTWARE DEVELOPER & TESTER
       </h2>
-      <p className="w-full  md:w-8/12 text-xs md:text-base el">
+      <p className="w-10/12 md:w-8/12 text-xs md:text-base el">
         I excel at creating software solutions that prioritize user-eccentric
         digital experiences.{" "}
         <span className="md:block hidden">
