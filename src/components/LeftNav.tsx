@@ -8,7 +8,7 @@ import { gsap } from "gsap";
 export default function LeftNav() {
   const leftNav = useRef(null);
   useLayoutEffect(() => {
-    const ctx = gsap.context(() => {
+    const ctx: any = gsap.context(() => {
       const tl = gsap.timeline();
       tl.fromTo(
         leftNav.current,
@@ -31,7 +31,7 @@ export default function LeftNav() {
         { opacity: 1, x: 0, duration: 1, ease: "power2.out", stagger: 0.2 }
       );
     }, ".nav-left");
-    return () => ctx.reverse();
+    return () => ctx.kill();
   }, []);
   return (
     <div

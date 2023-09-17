@@ -10,12 +10,12 @@ import Loading from "./loading";
 import { useState, useEffect, Fragment } from "react";
 
 export default function Home() {
-  const [loading, setLoading] = useState(false);
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     const timerId = setTimeout(() => {
       setLoading(false);
-    }, 1750);
+    }, 1400);
     return () => clearTimeout(timerId);
   }, []);
 

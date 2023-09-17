@@ -43,7 +43,7 @@ export default function RightNav() {
         );
     }, ".nav-right");
 
-    return () => ctx.reverse();
+    return () => ctx.kill();
   }, []);
 
   return (
@@ -51,7 +51,7 @@ export default function RightNav() {
       <div className="nav-right-top"></div>
       <nav className="w-full flex flex-col items-center justify-center gap-y-14 py-12">
         <div className="nav">
-          <AboutIcon />
+          <AboutIcon stroke={"#8892b0"} />
         </div>
         <div className="nav">
           <Exp />
