@@ -5,23 +5,24 @@ import { AboutIcon } from "./icons";
 
 const About = forwardRef((props: any, ref: any) => {
   const tech = [
-    "Java",
+    "JavaScript",
     "TypeScript",
     "Apollo-GraphQL",
     "React & Redux",
+    "Vue 3",
     "Next JS",
-    "Angular",
-    "Fastify",
     "NodeJS & Express",
+    "Fastify",
     "Nest JS",
-    "SQL & No-SQL Databases",
-    "Linux shell",
-    "Unit & Integration Testing",
-    "Azure",
-    "Material UI",
-    "Web Sockets",
     "Redis",
+    "SQL & No-SQL Databases",
+    "TypeORM & Mongoose",
+    "Tailwind CSS",
+    "Material UI",
     "GSAP",
+    "Unit & E2E Testing",
+    "AWS & GCP",
+    "Web Sockets",
   ];
 
   // useLayoutEffect(() => {
@@ -77,9 +78,8 @@ const About = forwardRef((props: any, ref: any) => {
         </p>
         <p className="text-center text-base el">
           I am a self-taught developer with a strong passion for learning and
-          bringing ideas to life. When I am not writing code, I am either
-          binging new Netflix series or endlessly scrolling through
-          StackOverflow.
+          bringing ideas to life. When I am not writing code, I am either binge
+          watching a new anime or endlessly scrolling through stack overflow.
         </p>
         <h3 className="text-secondary text-center italic el">
           Here's a list of some of the technologies I use:

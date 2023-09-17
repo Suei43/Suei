@@ -57,7 +57,7 @@ const Contact = forwardRef((props: any, ref: any) => {
           </g>
         </svg>
         <h1 className="w-fit text-5xl font-black text-white">Get in Touch</h1>
-        <p className="w-10/12 text-center">
+        <p className="w-10/12 md:w-9/12 text-center">
           Have an idea for a project? Need my expertise? or you just want to
           chat? Feel free to shoot me an email!
         </p>
@@ -71,7 +71,7 @@ const Contact = forwardRef((props: any, ref: any) => {
         </Link>
         <span className="absolute bottom-5 md:bottom-3 text-sm">
           {" "}
-          &copy; Folarin Raphael 2023
+          &copy; Folarin Raphael 2023 ☕
         </span>
       </div>
     </section>

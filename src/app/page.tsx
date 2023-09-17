@@ -17,7 +17,6 @@ export default function Home() {
   const contactScrollRef = useRef(null);
   const expScrollRef = useRef(null);
   const projScrollRef = useRef(null);
-
   useEffect(() => {
     const timerId = setTimeout(() => {
       setLoading(false);
