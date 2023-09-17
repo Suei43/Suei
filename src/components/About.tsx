@@ -25,24 +25,6 @@ const About = forwardRef((props: any, ref: any) => {
     "Web Sockets",
   ];
 
-  // useLayoutEffect(() => {
-  //   const ctx: any = gsap.context(() => {
-  //     const tl = gsap.timeline();
-  //     tl.to(".el", {
-  //       y: 20,
-  //       duration: 1,
-  //       opacity: 1,
-  //       ease: "power2.out",
-  //       stagger: 0.2,
-  //       scrollTrigger: {
-  //         trigger: ".el",
-  //         start: "top top",
-  //       },
-  //     });
-  //   }, ".panel");
-  //   return () => {};
-  // }, []);
-
   return (
     <section
       className=" w-screen md:w-full h-fit md:h-screen flex items-center justify-center my-20 panel"
@@ -100,5 +82,7 @@ const About = forwardRef((props: any, ref: any) => {
     </section>
   );
 });
+
+About.displayName = "About";
 
 export default About;

@@ -64,7 +64,7 @@ const Projects = forwardRef((props: any, ref: any) => {
     >
       <h1 className="w-10/12 text-xl font-bold text-white flex flex-row items-center justify-center gap-x-0 md:gap-x-2">
         <span className="w-fit text-center">
-          Here are some major projects I've worked on
+          Here are some major projects I&apos;ve worked on
         </span>
         <svg
           width="30"
@@ -120,9 +120,12 @@ const Projects = forwardRef((props: any, ref: any) => {
                 </h2>
                 <p className="text-sm text-primary">{item.description}</p>
                 <div className="flex flex-row flex-wrap gap-x-3 gap-y-3 justify-start">
-                  {item.tech.map((i) => {
+                  {item.tech.map((i, idx: number) => {
                     return (
-                      <p className="border text-white cursor-pointer border-primary py-1 px-3 text-xs">
+                      <p
+                        key={idx}
+                        className="border text-white cursor-pointer border-primary py-1 px-3 text-xs"
+                      >
                         {i}
                       </p>
                     );
@@ -136,8 +139,8 @@ const Projects = forwardRef((props: any, ref: any) => {
       {viewMore && (
         <div className="flex flex-col md:flex-row items-center w-10/12 justify-center gap-y-8">
           <h3 className="text-white text-base w-11/12 md:w-4/12 md:text-center">
-            And here's a list of other projects I've worked on, including my
-            open source contributions.
+            And here&apos;s a list of other projects I&apos;ve worked on,
+            including my open source contributions.
           </h3>
           <ProjectCards />
         </div>
@@ -153,5 +156,7 @@ const Projects = forwardRef((props: any, ref: any) => {
     </section>
   );
 });
+
+Projects.displayName = "Projects";
 
 export default Projects;

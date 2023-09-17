@@ -17,9 +17,12 @@ const Experience = forwardRef((props: any, ref: any) => {
       </h1>
       <main className="w-11/12 md:w-10/12 flex flex-row justify-center items-center h-2/6 gap-x-5 md:gap-x-7 md:gap-x-10 text-primary">
         <div className="flex flex-col">
-          {experience.map((item) => {
+          {experience.map((item, idx: number) => {
             return (
-              <div className="flex flex-col gap-y-0 items-center justify-center">
+              <div
+                key={idx}
+                className="flex flex-col gap-y-0 items-center justify-center"
+              >
                 <button
                   key={item.id}
                   onClick={() => {
@@ -51,8 +54,12 @@ const Experience = forwardRef((props: any, ref: any) => {
                 </h1>
                 <h3 className="text-sm">{item.company}</h3>
                 <span className="flex flex-col gap-y-3 p-2">
-                  {item.description.map((i) => {
-                    return <p className="text-sm">{i}</p>;
+                  {item.description.map((i, idx: number) => {
+                    return (
+                      <p key={idx} className="text-sm">
+                        {i}
+                      </p>
+                    );
                   })}
                 </span>
                 <p className="w-full text-right text-xs">
@@ -66,6 +73,8 @@ const Experience = forwardRef((props: any, ref: any) => {
     </section>
   );
 });
+
+Experience.displayName = "Experience";
 
 export default Experience;
 

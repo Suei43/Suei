@@ -1,7 +1,7 @@
 "use client";
 import { useState } from "react";
 
-export default function ProjectCards() {
+const ProjectCards = () => {
   const [viewMore, setViewMore] = useState(false);
   const [activeIndex, setActiveIndex] = useState("");
 
@@ -105,9 +105,12 @@ export default function ProjectCards() {
             <h1>{project.name}</h1>
             <p className="text-primary text-xs">{project.description}</p>
             <div className="flex flex-row flex-wrap gap-x-3 gap-y-3 justify-start">
-              {project.tech.map((i: string) => {
+              {project.tech.map((i: string, idx: number) => {
                 return (
-                  <p className="border text-primary cursor-pointer border-primary py-1 px-3 text-xs">
+                  <p
+                    key={idx}
+                    className="border text-primary cursor-pointer border-primary py-1 px-3 text-xs"
+                  >
                     {i}
                   </p>
                 );
@@ -118,4 +121,8 @@ export default function ProjectCards() {
       })}
     </section>
   );
-}
+};
+
+ProjectCards.displayName = "ProjectCards";
+
+export default ProjectCards;

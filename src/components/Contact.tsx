@@ -35,4 +35,6 @@ const Contact = forwardRef((props: any, ref: any) => {
   );
 });
 
+Contact.displayName = "Contact";
+
 export default Contact;
