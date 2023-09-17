@@ -64,7 +64,7 @@ const About = forwardRef((props: any, ref: any) => {
           watching a new anime or endlessly scrolling through stack overflow.
         </p>
         <h3 className="text-secondary text-center italic el">
-          Here's a list of some of the technologies I use:
+          Here&apos;s a list of some of the technologies I use:
         </h3>
         <div className="md:w-9/12 md:mx-auto flex flex-row flex-wrap gap-x-3 gap-y-3 justify-center">
           {tech.map((item, index) => {
