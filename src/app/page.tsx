@@ -17,6 +17,7 @@ export default function Home() {
   const contactScrollRef = useRef(null);
   const expScrollRef = useRef(null);
   const projScrollRef = useRef(null);
+
   useEffect(() => {
     const timerId = setTimeout(() => {
       setLoading(false);
@@ -28,7 +29,7 @@ export default function Home() {
     if (!loading) {
       gsap.to(".curr", {
         backgroundColor: "#2c3539",
-        duration: 3,
+        duration: 4,
         ease: "power2.out",
       });
     }

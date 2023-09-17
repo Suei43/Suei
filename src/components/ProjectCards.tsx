@@ -40,7 +40,7 @@ export default function ProjectCards() {
       id: 4,
       description: "First version of my portfolio website",
       tech: ["TypeScript", "Next JS", "Tailwind CSS"],
-      link: "https://suei.onrender.com",
+      link: "https://suei.space",
       git: "https://github.com/darksuei/suei",
     },
   ];
