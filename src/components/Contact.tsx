@@ -19,12 +19,12 @@ const Contact = forwardRef((props: any, ref: any) => {
           chat? Feel free to shoot me an email!
         </p>
         <Link
-          className="main-btn w-fit h-fit relative mt-2"
+          className="w-fit h-fit relative mt-2"
           href="mailto:folarinraphael@outlook.com"
         >
-          <button className="py-2.5 rounded-sm px-14 border-2 border-secondary text-secondary main-btn">
+          <div className="py-2.5 rounded-sm px-14 border-2 border-secondary text-secondary main-btn text-base">
             Say Hi
-          </button>
+          </div>
         </Link>
         <span className="absolute bottom-5 md:bottom-3 text-sm">
           {" "}

@@ -1,4 +1,4 @@
-const Code = (props: { size: string }) => {
+const Code = (props: { size: string; stroke: string }) => {
   return (
     <svg
       width={props.size}
@@ -17,7 +17,7 @@ const Code = (props: { size: string }) => {
       <g id="SVGRepo_iconCarrier">
         <path
           d="M7 8L3 11.6923L7 16M17 8L21 11.6923L17 16M14 4L10 20"
-          stroke="#8892b0"
+          stroke={props.stroke}
           strokeWidth="1.32"
           stroke-linecap="round"
           stroke-linejoin="round"

@@ -1,7 +1,7 @@
 const AboutIcon = (props: { size: string; stroke: string }) => {
   return (
     <svg
-      fill="#8892b0"
+      fill={props.stroke}
       width={props.size}
       height={props.size}
       viewBox="0 -0.06 33.834 33.834"

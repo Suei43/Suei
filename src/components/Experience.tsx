@@ -86,7 +86,7 @@ const Experience = forwardRef((props: any, ref: any) => {
     >
       <h1 className="text-3xl md:text-4xl font-bold text-center text-white flex flex-row gap-x-3 items-center">
         <span>My Experience</span>
-        <Exp size={"32"} />
+        <Exp size={"32"} stroke={"#8892b0"} />
       </h1>
       <main className="w-11/12 md:w-10/12 flex flex-row justify-center items-center h-2/6 gap-x-5 md:gap-x-7 md:gap-x-10 text-primary">
         <div className="flex flex-col">

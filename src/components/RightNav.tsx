@@ -1,5 +1,5 @@
 import { AboutIcon, ContactIcon, Exp, Code } from "./icons";
-import { useLayoutEffect } from "react";
+import { useLayoutEffect, useState } from "react";
 import { gsap } from "gsap";
 
 export default function RightNav(props: {
@@ -8,6 +8,7 @@ export default function RightNav(props: {
   expScrollRef: any;
   projScrollRef: any;
 }) {
+  const [active, setActive] = useState("home");
   const width = window.innerWidth;
   useLayoutEffect(() => {
     const ctx: any = gsap.context(() => {
@@ -54,6 +55,7 @@ export default function RightNav(props: {
 
   const handleScroll = (e: React.SyntheticEvent, str: string) => {
     e.preventDefault();
+    setActive(str);
     let scroll;
     switch (str) {
       case "about":
@@ -79,16 +81,28 @@ export default function RightNav(props: {
       <div className="nav-right-top"></div>
       <nav className="w-full flex flex-col items-center justify-center gap-y-12 md:gap-y-14 py-12">
         <div className="nav" onClick={(e) => handleScroll(e, "about")}>
-          <AboutIcon stroke={"#8892b0"} size={width > 900 ? "22" : "19"} />
+          <AboutIcon
+            stroke={active === "about" ? "#0579C3" : "#8892b0"}
+            size={width > 900 ? "22" : "19"}
+          />
         </div>
         <div className="nav" onClick={(e) => handleScroll(e, "exp")}>
-          <Exp size={width > 900 ? "28" : "24"} />
+          <Exp
+            stroke={active === "exp" ? "#0579C3" : "#8892b0"}
+            size={width > 900 ? "28" : "24"}
+          />
         </div>
         <div className="nav" onClick={(e) => handleScroll(e, "proj")}>
-          <Code size={width > 900 ? "30" : "25"} />
+          <Code
+            stroke={active === "proj" ? "#0579C3" : "#8892b0"}
+            size={width > 900 ? "30" : "25"}
+          />
         </div>
         <div className="nav" onClick={(e) => handleScroll(e, "contact")}>
-          <ContactIcon size={width > 900 ? "28" : "24"} />
+          <ContactIcon
+            stroke={active === "contact" ? "#0579C3" : "#8892b0"}
+            size={width > 900 ? "28" : "24"}
+          />
         </div>
       </nav>
       <div className="nav-right-bottom"></div>
