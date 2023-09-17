@@ -1,62 +1,18 @@
 "use client";
-import cloudwave from "@/assets/cloudwave.png";
-import cybtracy from "@/assets/cybtracy.png";
-import raphaelly from "@/assets/raphaelly.png";
 import Image from "next/image";
-import { Fragment, useState, forwardRef } from "react";
+import { useState, forwardRef } from "react";
 import ProjectCards from "./ProjectCards";
 import { Github, Preview } from "./icons";
+import { projects } from "@/data";
 
 const Projects = forwardRef((props: any, ref: any) => {
   const [viewMore, setViewMore] = useState(false);
-  const [activeIndex, setActiveIndex] = useState(-1);
 
   const handleViewMore = (e: any) => {
     e.preventDefault();
     setViewMore(!viewMore);
   };
-  const projects = [
-    {
-      name: "Cloud Wave",
-      id: 1,
-      description:
-        "A cloud storage web application where users can upload, share, preview and store files and media for free.",
-      tech: ["React", "Node JS", "Mega JS", "Mongo DB", "Million JS", "Docker"],
-      link: "https://cloud-wave-x9iy.onrender.com/",
-      image: cloudwave,
-      git: "https://github.com/darksuei/cloudwave",
-    },
-    {
-      name: "Image Vision API",
-      id: 2,
-      description:
-        "An image classification API made using tensorflow mobile-net model for image recognition.",
-      tech: ["TypeScript", "Fastify", "TypeORM", "Tensorflow JS", "Mongo DB"],
-      link: "https://image-vision-api.onrender.com/",
-      image: "",
-      git: "https://github.com/darksuei/imagevision",
-    },
-    {
-      name: "Cybtracy",
-      id: 3,
-      description:
-        "The official website for Cybtracy, a non-profit organization that aims to provide digital literacy to children in underserved communities.",
-      tech: ["Next JS", "Web pack", "TypeScript", "Framer Motion"],
-      link: "https://cybtracy.com/",
-      image: cybtracy,
-      git: "https://github.com/Cybtracy/webapp-frontend",
-    },
-    {
-      name: "Raphaelly Editorials Services",
-      id: 4,
-      description:
-        "The official website for an editorial organization focused on project research and marketing consultancy.",
-      tech: ["JavaScript", "Tailwind CSS", "Django", "PostgreSQL", "AWS S3"],
-      link: "https://raphaellyeditorial.netlify.app/",
-      image: raphaelly,
-      git: "https://github.com/darksuei/raphaellyeditorials",
-    },
-  ];
+
   return (
     <section
       className={`w-full h-fit flex flex-col items-center justify-center gap-y-10 mt-32 md:mt-0`}

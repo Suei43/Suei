@@ -1,15 +1,15 @@
 import React, { useState } from "react";
 import Link from "next/link";
 
-const Github = (props: { link?: string }) => {
+const Github = (props: { link?: string; size?: string }) => {
   const [active, setActive] = useState(false);
   const [link, setLink] = useState(props.link || "https://github.com/darksuei");
   return (
     <Link href={link}>
       <svg
         xmlns="http://www.w3.org/2000/svg"
-        width="20"
-        height="20"
+        width={props.size || "20"}
+        height={props.size || "20"}
         viewBox="0 0 24 24"
         fill="none"
         stroke={active ? "#0579C3" : "#8892b0"}

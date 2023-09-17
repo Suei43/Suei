@@ -1,49 +1,16 @@
 "use client";
 import { useState } from "react";
+import { moreprojects } from "@/data";
 
 const ProjectCards = () => {
   const [viewMore, setViewMore] = useState(false);
   const [activeIndex, setActiveIndex] = useState("");
+  const projects = moreprojects;
 
   const handleViewMore = (e: any) => {
     e.preventDefault();
     setViewMore(!viewMore);
   };
-
-  const projects = [
-    {
-      name: "Uchegbu Family Tree",
-      id: 1,
-      description: "Edit and explore your family tree.",
-      tech: ["JavaScript", "D3 JS", "Mongo DB", "Node JS"],
-      link: "https://uchegbu-family-tree.onrender.com/",
-      git: "https://github.com/darksuei/family-tree",
-    },
-    {
-      name: "X profile",
-      id: 2,
-      description: "An X(twitter) profile card list.",
-      tech: ["Next JS", "React", "FireBase", "PostgreSQL"],
-      link: "https://x.hellofaizan.me/",
-      git: "https://github.com/hellofaizan/xprofile",
-    },
-    {
-      name: "Studera AI",
-      id: 3,
-      description: "A personalized exam preparation platform",
-      tech: ["Angular", "Redis", "TypeScript", "MongoDB"],
-      link: "https://studera.onrender.com",
-      git: "https://github.com/darksuei/studera-AI",
-    },
-    {
-      name: "My Portfolio v1",
-      id: 4,
-      description: "First version of my portfolio website",
-      tech: ["TypeScript", "Next JS", "Tailwind CSS"],
-      link: "https://suei.space",
-      git: "https://github.com/darksuei/suei",
-    },
-  ];
 
   return (
     <section className="w-full p-6 flex flex-row flex-wrap items-center justify-center gap-y-10 gap-x-10">

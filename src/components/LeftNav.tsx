@@ -1,8 +1,6 @@
 "use client";
 import { useLayoutEffect, useRef } from "react";
-import { Discord, Instagram, LinkedIn } from "./icons";
-import { Github } from "./icons";
-import { Twitter } from "./icons";
+import { Discord, Instagram, LinkedIn, Github, Twitter } from "./icons";
 import { gsap } from "gsap";
 
 export default function LeftNav() {
