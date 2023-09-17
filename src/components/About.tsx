@@ -1,9 +1,9 @@
 import Link from "next/link";
-import { useLayoutEffect } from "react";
+import { useLayoutEffect, forwardRef } from "react";
 import { gsap } from "gsap";
 import { AboutIcon } from "./icons";
 
-export default function About() {
+const About = forwardRef((props: any, ref: any) => {
   const tech = [
     "Java",
     "TypeScript",
@@ -21,47 +21,32 @@ export default function About() {
     "Material UI",
     "Web Sockets",
     "Redis",
+    "GSAP",
   ];
 
-  useLayoutEffect(() => {
-    const ctx: any = gsap.context(() => {
-      const tl = gsap.timeline();
-      tl.set(".el", {
-        y: 20,
-        opacity: 0,
-        scrollTrigger: {
-          trigger: ".panel",
-          start: "top top",
-        },
-      });
-      tl.fromTo(
-        ".el",
-        {
-          y: 20,
-          opacity: 0,
-          scrollTrigger: {
-            trigger: ".panel",
-            start: "top top",
-          },
-        },
-        {
-          y: 0,
-          duration: 1,
-          opacity: 1,
-          ease: "power2.out",
-          stagger: 0.2,
-          scrollTrigger: {
-            trigger: ".panel",
-            start: "top top",
-          },
-        }
-      );
-    });
-    return () => {};
-  }, []);
+  // useLayoutEffect(() => {
+  //   const ctx: any = gsap.context(() => {
+  //     const tl = gsap.timeline();
+  //     tl.to(".el", {
+  //       y: 20,
+  //       duration: 1,
+  //       opacity: 1,
+  //       ease: "power2.out",
+  //       stagger: 0.2,
+  //       scrollTrigger: {
+  //         trigger: ".el",
+  //         start: "top top",
+  //       },
+  //     });
+  //   }, ".panel");
+  //   return () => {};
+  // }, []);
 
   return (
-    <section className=" w-screen md:w-full h-fit md:h-screen flex items-center justify-center my-20 md:my-0 panel">
+    <section
+      className=" w-screen md:w-full h-fit md:h-screen flex items-center justify-center my-20 md:my-0 panel"
+      ref={ref}
+    >
       <div className="w-11/12 md:w-8/12 text-primary flex flex-col justify-center p-6 gap-y-4">
         <h1 className="text-3xl font-bold text-white flex flex-row justify-center items-center gap-x-4">
           <span>About Me</span>
@@ -97,7 +82,7 @@ export default function About() {
           StackOverflow.
         </p>
         <h3 className="text-secondary text-center italic el">
-          Here's a list of some of the technologies I use,
+          Here's a list of some of the technologies I use:
         </h3>
         <div className="md:w-9/12 md:mx-auto flex flex-row flex-wrap gap-x-3 gap-y-3 justify-center">
           {tech.map((item, index) => {
@@ -114,4 +99,6 @@ export default function About() {
       </div>
     </section>
   );
-}
+});
+
+export default About;

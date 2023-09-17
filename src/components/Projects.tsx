@@ -3,11 +3,11 @@ import cloudwave from "@/assets/cloudwave.png";
 import cybtracy from "@/assets/cybtracy.png";
 import raphaelly from "@/assets/raphaelly.png";
 import Image from "next/image";
-import { Fragment, useState } from "react";
+import { Fragment, useState, forwardRef } from "react";
 import ProjectCards from "./ProjectCards";
 import { Github, Preview } from "./icons";
 
-export default function Projects() {
+const Projects = forwardRef((props: any, ref: any) => {
   const [viewMore, setViewMore] = useState(false);
   const [activeIndex, setActiveIndex] = useState(-1);
 
@@ -31,14 +31,7 @@ export default function Projects() {
       id: 2,
       description:
         "An image classification API for recognizing and classifying objects in images at a large scale using artificial intelligence models.",
-      tech: [
-        "TypeScript",
-        "Fastify",
-        "TypeORM",
-        "Tensorflow JS",
-        "Mongo DB",
-        "Swagger",
-      ],
+      tech: ["TypeScript", "Fastify", "TypeORM", "Tensorflow JS", "Mongo DB"],
       link: "https://image-vision-api.onrender.com/",
       image: "",
       git: "https://github.com/darksuei/imagevision",
@@ -67,6 +60,7 @@ export default function Projects() {
   return (
     <section
       className={`w-full h-fit flex flex-col items-center justify-center gap-y-10 mt-32 md:mt-0`}
+      ref={ref}
     >
       <h1 className="w-10/12 text-xl font-bold text-white flex flex-row items-center justify-center gap-x-0 md:gap-x-2">
         <span className="w-fit text-center">
@@ -97,11 +91,11 @@ export default function Projects() {
           </g>
         </svg>
       </h1>
-      <div className="w-10/12 flex flex-row flex-wrap items-center gap-y-10 md:gap-x-10 md:justify-evenly">
+      <div className="w-11/12 flex flex-row flex-wrap items-center gap-y-10 md:gap-x-10 md:justify-evenly">
         {projects.map((item) => {
           return (
             <div
-              className={`p-4 rounded-lg md:w-4/12 h-fit border border-primary flex flex-col gap-y-4 relative items-center proj-card`}
+              className={`p-4 rounded-lg md:w-3/12 h-fit border border-primary flex flex-col gap-y-4 relative items-center proj-card`}
               key={item.id}
             >
               {item.image && (
@@ -115,7 +109,7 @@ export default function Projects() {
               <div
                 className={`${
                   item.image && " w-full "
-                } p-0 md:p-4 flex flex-col gap-y-3`}
+                } p-0 md:p-1 flex flex-col gap-y-3`}
               >
                 <h2 className="text-secondary font-black text-xl flex flex-row justify-between items-center">
                   {item.name}
@@ -156,4 +150,6 @@ export default function Projects() {
       </button>
     </section>
   );
-}
+});
+
+export default Projects;

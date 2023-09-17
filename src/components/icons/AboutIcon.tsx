@@ -12,7 +12,7 @@ const AboutIcon = (props: {
       xmlns="http://www.w3.org/2000/svg"
       stroke={props.stroke}
       strokeWidth="0.33834000000000003"
-      className="social-icon"
+      className="social-icon-nav"
     >
       <g id="SVGRepo_bgCarrier" strokeWidth="0"></g>
       <g

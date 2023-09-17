@@ -2,7 +2,12 @@ import { AboutIcon, ContactIcon, Exp, Code } from "./icons";
 import { useLayoutEffect } from "react";
 import { gsap } from "gsap";
 
-export default function RightNav() {
+export default function RightNav(props: {
+  aboutScrollRef: any;
+  contactScrollRef: any;
+  expScrollRef: any;
+  projScrollRef: any;
+}) {
   useLayoutEffect(() => {
     const ctx: any = gsap.context(() => {
       const tl = gsap.timeline();
@@ -43,23 +48,45 @@ export default function RightNav() {
         );
     }, ".nav-right");
 
-    return () => ctx.kill();
+    return () => {};
   }, []);
+
+  const handleScroll = (e: React.SyntheticEvent, str: string) => {
+    e.preventDefault();
+    let scroll;
+    switch (str) {
+      case "about":
+        scroll = props.aboutScrollRef.current;
+        break;
+      case "exp":
+        scroll = props.expScrollRef.current;
+        break;
+      case "proj":
+        scroll = props.projScrollRef.current;
+        break;
+      case "contact":
+        scroll = props.contactScrollRef.current;
+        break;
+    }
+    if (scroll) {
+      scroll.scrollIntoView({ behavior: "smooth" });
+    }
+  };
 
   return (
     <div className="nav-right w-14 md:flex flex-col items-end justify-center absolute hidden md:fixed right-0 top-0 z-10">
       <div className="nav-right-top"></div>
       <nav className="w-full flex flex-col items-center justify-center gap-y-14 py-12">
-        <div className="nav">
+        <div className="nav" onClick={(e) => handleScroll(e, "about")}>
           <AboutIcon stroke={"#8892b0"} />
         </div>
-        <div className="nav">
+        <div className="nav" onClick={(e) => handleScroll(e, "exp")}>
           <Exp />
         </div>
-        <div className="nav">
+        <div className="nav" onClick={(e) => handleScroll(e, "proj")}>
           <Code />
         </div>
-        <div className="nav">
+        <div className="nav" onClick={(e) => handleScroll(e, "contact")}>
           <ContactIcon />
         </div>
       </nav>

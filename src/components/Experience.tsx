@@ -1,7 +1,7 @@
 "use client";
-import { Fragment, useState } from "react";
+import { Fragment, useState, forwardRef } from "react";
 
-export default function Experience() {
+const Experience = forwardRef((props: any, ref: any) => {
   const [active, setActive] = useState(1);
 
   const experience = [
@@ -81,6 +81,7 @@ export default function Experience() {
   return (
     <section
       className={`w-full h-fit md:h-screen flex flex-col gap-20 items-center justify-center`}
+      ref={ref}
     >
       <h1 className="text-3xl md:text-4xl font-bold text-center text-white flex flex-row gap-x-3 items-center">
         <span>My Experience</span>
@@ -158,4 +159,6 @@ export default function Experience() {
       </main>
     </section>
   );
-}
+});
+
+export default Experience;
