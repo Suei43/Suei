@@ -4,9 +4,9 @@ import { gsap } from "gsap";
 
 export default function RightNav(props: {
   aboutScrollRef: any;
-  contactScrollRef: any;
   expScrollRef: any;
   projScrollRef: any;
+  contactScrollRef: any;
 }) {
   const [active, setActive] = useState("home");
   const width = window.innerWidth;
@@ -55,6 +55,7 @@ export default function RightNav(props: {
 
   const handleScroll = (e: React.SyntheticEvent, str: string) => {
     e.preventDefault();
+    e.stopPropagation();
     setActive(str);
     let scroll;
     switch (str) {
