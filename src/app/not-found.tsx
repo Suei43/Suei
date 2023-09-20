@@ -1,7 +1,7 @@
 "use client";
 
 import { Fragment, useState, useEffect, useLayoutEffect } from "react";
-import Loading from "./loading";
+import Loading from "@/components/loading";
 import LeftNav from "@/components/LeftNav";
 import NotFound from "@/components/NotFound";
 import { gsap } from "gsap";

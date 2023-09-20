@@ -79,7 +79,12 @@ html {
   width: 175px;
   position: absolute;
   top: -100px;
-  transform: rotateZ(50deg);
+  transform: rotateZ(70deg);
+}
+.avatar:hover {
+  cursor: pointer;
+  transition: all 0.25s ease-in;
+  transform: scale(1.1);
 }
 
 @media (max-width: 768px) {
