@@ -21,7 +21,7 @@ export const experience = [
     company: "Circle-Dodge Systems",
     title: "BackEnd Developer",
     range: "Feb 2023 - Aug 2023",
-    url: "https://circle-dodge.com",
+    url: "",
     btn: 2,
     description: [
       "Worked in collaboration with a team to build and maintain the backend for a robust restaurant management system.",
@@ -33,7 +33,7 @@ export const experience = [
     company: "Cybtracy",
     title: "Volunteer",
     range: "Jul 2023 - Present",
-    url: "https://circle-dodge.com",
+    url: "https://cybtracy.com",
     btn: 3,
     description: [
       "Led a small team to build the official website of the organization",
