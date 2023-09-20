@@ -4,7 +4,7 @@ import TopLinks from "./TopLinks";
 
 export default function Main() {
   return (
-    <div className="w-full md:w-11/12 mx-auto h-full relative box-border">
+    <div className="w-full md:w-11/12 md:mx-auto h-full relative box-border">
       <TopLinks />
       <Me />
       <Intro />
