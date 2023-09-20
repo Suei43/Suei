@@ -17,7 +17,33 @@ export const metadata: Metadata = {
   authors: [{ name: "Suei" }],
   creator: "Folarin Raphael",
   publisher: "Folarin Raphael",
-  icons: [{ rel: "icon", url: Favicon.src }],
+  icons: [
+    { rel: "icon", url: Favicon.src },
+    {
+      rel: "icon",
+      sizes: "32x32",
+      url: "/public/favicon-32x32.png",
+    },
+    {
+      rel: "apple-touch-icon",
+      sizes: "180x180",
+      url: "/public/apple-touch-icon.png",
+    },
+    {
+      rel: "manifest",
+      url: "/public/site.webmanifest",
+    },
+    {
+      rel: "icon",
+      sizes: "192x192",
+      url: "/public/android-chrome-192x192.png",
+    },
+    {
+      rel: "icon",
+      sizes: "512x512",
+      url: "/public/android-chrome-512x512.png",
+    },
+  ],
   openGraph: {
     title: "Folarin Raphael",
     description: "Folarin's personal portfolio",
@@ -25,6 +51,14 @@ export const metadata: Metadata = {
     siteName: "Folarin Raphael",
     locale: "en_US",
     type: "website",
+    images: [
+      {
+        url: "/og-image.jpeg",
+        width: 1200,
+        height: 630,
+        alt: "",
+      },
+    ],
   },
 };
 
