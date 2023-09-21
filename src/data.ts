@@ -96,6 +96,7 @@ export const projects = [
     tech: ["TypeScript", "Fastify", "TypeORM", "Tensorflow JS", "Mongo DB"],
     link: "https://image-vision-api.onrender.com/",
     image: "",
+    demo: "https://image-vison-demo.vercel.app/",
     git: "https://github.com/darksuei/imagevision",
   },
   {

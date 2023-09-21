@@ -4,6 +4,7 @@ import { useState, forwardRef } from "react";
 import ProjectCards from "./ProjectCards";
 import { Github, Preview } from "./icons";
 import { projects } from "@/data";
+import Demo from "./icons/Demo";
 
 const Projects = forwardRef((props: any, ref: any) => {
   const [viewMore, setViewMore] = useState(false);
@@ -71,6 +72,7 @@ const Projects = forwardRef((props: any, ref: any) => {
                   {item.name}
                   <div className="flex flex-row items-center justify-center gap-x-3">
                     <Github link={item.git} />
+                    {item.demo && <Demo link={item.demo} />}
                     <Preview link={item.link} />
                   </div>
                 </h2>
