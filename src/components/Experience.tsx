@@ -17,7 +17,7 @@ const Experience = forwardRef((props: any, ref: any) => {
   return (
     <InView as="div" onChange={(inView, entry) => handleInView(inView, entry)}>
       <section
-        className={`w-full h-fit md:h-screen bg-red-700 py-10 flex flex-col gap-10 md:gap-20 items-center justify-center`}
+        className={`w-full h-fit md:h-screen py-10 flex flex-col gap-10 md:gap-20 items-center justify-center`}
         ref={ref}
       >
         <h1 className="text-3xl md:text-4xl font-bold text-center text-white flex flex-row gap-x-3 items-center">

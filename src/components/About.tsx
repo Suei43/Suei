@@ -11,9 +11,6 @@ const About = forwardRef((props: any, ref: any) => {
     if (inView) {
       setlocation("about");
     }
-    if (!inView) {
-      setlocation("home");
-    }
   };
   return (
     <InView as="div" onChange={(inView, entry) => handleInView(inView, entry)}>

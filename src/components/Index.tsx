@@ -23,6 +23,7 @@ const Index = () => {
   const projScrollRef = useRef(null);
 
   useEffect(() => {
+    setlocation("home");
     const timerId = setTimeout(() => {
       setLoading(false);
     }, 1400);
