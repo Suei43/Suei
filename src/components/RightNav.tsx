@@ -1,6 +1,7 @@
 import { AboutIcon, ContactIcon, Exp, Code } from "./icons";
-import { useLayoutEffect, useState } from "react";
+import React, { useLayoutEffect, useEffect, useContext } from "react";
 import { gsap } from "gsap";
+import { LocationContext } from "@/context/LocationContext";
 
 export default function RightNav(props: {
   aboutScrollRef: any;
@@ -8,7 +9,7 @@ export default function RightNav(props: {
   projScrollRef: any;
   contactScrollRef: any;
 }) {
-  const [active, setActive] = useState("home");
+  const { location, setlocation } = useContext(LocationContext);
   const width = window.innerWidth;
   useLayoutEffect(() => {
     const ctx: any = gsap.context(() => {
@@ -56,7 +57,7 @@ export default function RightNav(props: {
   const handleScroll = (e: React.SyntheticEvent, str: string) => {
     e.preventDefault();
     e.stopPropagation();
-    setActive(str);
+    setlocation(str);
     let scroll;
     switch (str) {
       case "about":
@@ -77,31 +78,49 @@ export default function RightNav(props: {
     }
   };
 
+  // useEffect(() => {
+  //   let scroll;
+  //   switch (location) {
+  //     case "exp":
+  //       scroll = props.expScrollRef.current;
+  //       break;
+  //     case "proj":
+  //       scroll = props.projScrollRef.current;
+  //       break;
+  //     case "contact":
+  //       scroll = props.contactScrollRef.current;
+  //       break;
+  //   }
+  //   if (scroll) {
+  //     scroll.scrollIntoView({ behavior: "smooth" });
+  //   }
+  // }, [location]);
+
   return (
     <div className="nav-right w-11 md:w-14 flex flex-col items-end justify-center fixed right-0 top-0 z-10">
       <div className="nav-right-top"></div>
       <nav className="w-full flex flex-col items-center justify-center gap-y-12 md:gap-y-14 py-12">
         <div className="nav" onClick={(e) => handleScroll(e, "about")}>
           <AboutIcon
-            stroke={active === "about" ? "#0579C3" : "#8892b0"}
+            stroke={location === "about" ? "#0579C3" : "#8892b0"}
             size={width > 900 ? "22" : "19"}
           />
         </div>
         <div className="nav" onClick={(e) => handleScroll(e, "exp")}>
           <Exp
-            stroke={active === "exp" ? "#0579C3" : "#8892b0"}
+            stroke={location === "exp" ? "#0579C3" : "#8892b0"}
             size={width > 900 ? "28" : "24"}
           />
         </div>
         <div className="nav" onClick={(e) => handleScroll(e, "proj")}>
           <Code
-            stroke={active === "proj" ? "#0579C3" : "#8892b0"}
+            stroke={location === "proj" ? "#0579C3" : "#8892b0"}
             size={width > 900 ? "30" : "25"}
           />
         </div>
         <div className="nav" onClick={(e) => handleScroll(e, "contact")}>
           <ContactIcon
-            stroke={active === "contact" ? "#0579C3" : "#8892b0"}
+            stroke={location === "contact" ? "#0579C3" : "#8892b0"}
             size={width > 900 ? "28" : "24"}
           />
         </div>

@@ -11,9 +11,11 @@ import Contact from "@/components/Contact";
 import Projects from "@/components/Projects";
 import Experience from "@/components/Experience";
 import Loading from "@/components/loading";
+import { LocationContext } from "@/context/LocationContext";
 
 const Index = () => {
   const [loading, setLoading] = useState(true);
+  const [location, setlocation] = useState("home");
   const doc = useRef(null);
   const aboutScrollRef = useRef(null);
   const contactScrollRef = useRef(null);
@@ -37,28 +39,30 @@ const Index = () => {
     }
   }, [loading]);
   return (
-    <Fragment>
-      {loading ? (
-        <Loading />
-      ) : (
-        <main className="w-screen flex flex-col box-border curr" ref={doc}>
-          <div className="relative h-screen w-full box-border">
-            <LeftNav />
-            <RightNav
-              aboutScrollRef={aboutScrollRef}
-              expScrollRef={expScrollRef}
-              projScrollRef={projScrollRef}
-              contactScrollRef={contactScrollRef}
-            />
-            <Main />
-          </div>
-          <About ref={aboutScrollRef} />
-          <Experience ref={expScrollRef} />
-          <Projects ref={projScrollRef} />
-          <Contact ref={contactScrollRef} />
-        </main>
-      )}
-    </Fragment>
+    <LocationContext.Provider value={{ location, setlocation }}>
+      <Fragment>
+        {loading ? (
+          <Loading />
+        ) : (
+          <main className="w-screen flex flex-col box-border curr" ref={doc}>
+            <div className="relative h-screen w-full box-border">
+              <LeftNav />
+              <RightNav
+                aboutScrollRef={aboutScrollRef}
+                expScrollRef={expScrollRef}
+                projScrollRef={projScrollRef}
+                contactScrollRef={contactScrollRef}
+              />
+              <Main />
+            </div>
+            <About ref={aboutScrollRef} />
+            <Experience ref={expScrollRef} />
+            <Projects ref={projScrollRef} />
+            <Contact ref={contactScrollRef} />
+          </main>
+        )}
+      </Fragment>
+    </LocationContext.Provider>
   );
 };
 
