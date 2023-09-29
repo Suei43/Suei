@@ -19,6 +19,7 @@ const Contact = forwardRef((props: any, ref: any) => {
           chat? Feel free to shoot me an email!
         </p>
         <Link
+          target="_blank"
           className="w-fit h-fit relative mt-2"
           href="mailto:folarinraphael@outlook.com"
         >

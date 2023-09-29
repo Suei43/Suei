@@ -4,7 +4,7 @@ import Link from "next/link";
 const LinkedIn = (props: { size?: string }) => {
   const [active, setActive] = useState(false);
   return (
-    <Link href="https://www.linkedin.com/in/folarin-raphael">
+    <Link target="_blank" href="https://www.linkedin.com/in/folarin-raphael">
       <svg
         xmlns="http://www.w3.org/2000/svg"
         width={props.size || "20"}

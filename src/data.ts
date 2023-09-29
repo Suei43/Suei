@@ -3,6 +3,27 @@ import cybtracy from "@/assets/cybtracy.png";
 import raphaelly from "@/assets/raphaelly.png";
 import mega from "@/assets/mega.png";
 
+export const tech = [
+  "JavaScript",
+  "TypeScript",
+  "Apollo-GraphQL",
+  "React & Redux",
+  "Vue 3",
+  "Next JS",
+  "NodeJS & Express",
+  "Fastify",
+  "Nest JS",
+  "Redis",
+  "SQL & No-SQL Databases",
+  "TypeORM & Mongoose",
+  "Tailwind CSS",
+  "Material UI",
+  "GSAP",
+  "Unit & E2E Testing",
+  "AWS & GCP",
+  "Web Sockets",
+];
+
 export const experience = [
   {
     id: 1,

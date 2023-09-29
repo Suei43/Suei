@@ -1,10 +1,8 @@
 "use client";
 import React, { useLayoutEffect, useState } from "react";
 import { gsap } from "gsap";
-// import { useRouter } from "next/router";
 
 export default function Intro() {
-  // const router = useRouter();
   const [isVisible, setIsVisible] = useState(false);
 
   const handleResumeClick = (e: React.SyntheticEvent) => {
@@ -12,7 +10,7 @@ export default function Intro() {
     const URL =
       "https://docs.google.com/document/d/1igEWhqD8-Ko6Xu6PPKVDBmqPB2BPbxEY8siqQtirCUc/edit?usp=sharing";
     if (typeof window !== undefined) {
-      window.location.href = URL;
+      window.open(URL, "_blank");
     }
   };
 
@@ -66,7 +64,7 @@ export default function Intro() {
       <div className="relative w-fit h-fit mt-5 rounded-lg el">
         <button
           onClick={(e) => handleResumeClick(e)}
-          className="text-secondary border-2 border-secondary rounded-md py-3 w-40 main-btn text-xs md:text-md"
+          className="text-secondary border-2 border-secondary rounded-sm py-3 w-40 main-btn text-xs md:text-md"
         >
           Résumé
         </button>

@@ -4,7 +4,7 @@ import Link from "next/link";
 const Discord = (props: { size?: string }) => {
   const [active, setActive] = useState(false);
   return (
-    <Link href="https://discordapp.com/users/sueii">
+    <Link target="_blank" href="https://discordapp.com/users/sueii">
       <svg
         width={props.size || "28"}
         height={props.size || "28"}

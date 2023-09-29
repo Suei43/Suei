@@ -4,7 +4,7 @@ import Link from "next/link";
 const Twitter = (props: { size?: string }) => {
   const [active, setActive] = useState(false);
   return (
-    <Link href="https://twitter.com/sueii__">
+    <Link target="_blank" href="https://twitter.com/sueii__">
       <svg
         xmlns="http://www.w3.org/2000/svg"
         width={props.size || "20"}

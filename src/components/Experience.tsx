@@ -1,7 +1,6 @@
 "use client";
 import { useState, forwardRef } from "react";
 import { Exp } from "./icons";
-import { gsap } from "gsap";
 import { experience } from "@/data";
 
 const Experience = forwardRef((props: any, ref: any) => {

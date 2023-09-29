@@ -1,30 +1,9 @@
 import Link from "next/link";
-import { useLayoutEffect, forwardRef } from "react";
-import { gsap } from "gsap";
+import { forwardRef } from "react";
 import { AboutIcon } from "./icons";
+import { tech } from "@/data";
 
 const About = forwardRef((props: any, ref: any) => {
-  const tech = [
-    "JavaScript",
-    "TypeScript",
-    "Apollo-GraphQL",
-    "React & Redux",
-    "Vue 3",
-    "Next JS",
-    "NodeJS & Express",
-    "Fastify",
-    "Nest JS",
-    "Redis",
-    "SQL & No-SQL Databases",
-    "TypeORM & Mongoose",
-    "Tailwind CSS",
-    "Material UI",
-    "GSAP",
-    "Unit & E2E Testing",
-    "AWS & GCP",
-    "Web Sockets",
-  ];
-
   return (
     <section
       className=" w-screen md:w-full h-fit md:h-screen flex items-center justify-center my-20 panel"

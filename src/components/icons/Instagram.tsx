@@ -4,7 +4,7 @@ import React, { useState } from "react";
 const Instagram = (props: { size?: string }) => {
   const [active, setActive] = useState(false);
   return (
-    <Link href="https://instagram.com/darksuei">
+    <Link target="_blank" href="https://instagram.com/darksuei">
       <svg
         xmlns="http://www.w3.org/2000/svg"
         width={props.size || "20"}

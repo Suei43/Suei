@@ -6,7 +6,7 @@ export default function Preview(props: { link: string }) {
   const [link, setLink] = useState(props.link);
 
   return (
-    <Link href={link}>
+    <Link target="_blank" href={link}>
       <svg
         xmlns="http://www.w3.org/2000/svg"
         width="21"

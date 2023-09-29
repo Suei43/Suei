@@ -5,7 +5,7 @@ const Github = (props: { link?: string; size?: string }) => {
   const [active, setActive] = useState(false);
   const [link, setLink] = useState(props.link || "https://github.com/darksuei");
   return (
-    <Link href={link}>
+    <Link target="_blank" href={link}>
       <svg
         xmlns="http://www.w3.org/2000/svg"
         width={props.size || "20"}

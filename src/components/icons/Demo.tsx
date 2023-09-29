@@ -4,7 +4,7 @@ import React, { useState } from "react";
 const Demo = (props: { link: string }) => {
   const [active, setActive] = useState(false);
   return (
-    <Link href={props.link}>
+    <Link target="_blank" href={props.link}>
       <svg
         width="22"
         height="22"
