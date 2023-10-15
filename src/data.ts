@@ -1,4 +1,4 @@
-import cloudwave from "@/assets/cloudwave.png";
+import cloudwave from "@/assets/cloudwave.jpg";
 import cybtracy from "@/assets/cybtracy.png";
 import raphaelly from "@/assets/raphaelly.png";
 import mega from "@/assets/mega.png";
@@ -8,19 +8,19 @@ export const tech = [
   "TypeScript",
   "Apollo-GraphQL",
   "React & Redux",
-  "Vue 3",
   "Next JS",
   "NodeJS & Express",
   "Fastify",
-  "Nest JS",
-  "Redis",
+  "Solidity",
+  "Ethereum",
+  "EtherJS",
   "SQL & No-SQL Databases",
   "TypeORM & Mongoose",
   "Tailwind CSS",
-  "Material UI",
+  "Ant Design",
   "GSAP",
   "Unit & E2E Testing",
-  "AWS & GCP",
+  "Azure",
   "Web Sockets",
 ];
 
@@ -64,8 +64,8 @@ export const experience = [
   // {
   //   id: 4,
   //   company: "",
-  //   title: "A2SV Hackathon semi-finalist",
-  //   range: "Sep 2023",
+  //   title: "A2SV Hackathon Finalist",
+  //   range: "Sep 2023-Nov 2023",
   //   url: "",
   //   btn: 4,
   //   description: [
@@ -144,8 +144,17 @@ export const projects = [
 
 export const moreprojects = [
   {
-    name: "X profile",
+    name: "ERC20 Token Transfer Contract",
     id: 1,
+    description:
+      "Manage and transfer ERC-20 tokens with support for multiple tokens and ensuring secure and controlled token transfers.",
+    tech: ["Solidity", "Alchemy", "Hardhat", "TypeScript"],
+    link: "https://sepolia.etherscan.io/address/0x920bE130B50Dc729e778C8b4DcFE5A94D733AbF6",
+    git: "https://github.com/darksuei/Erc20-token-transfer",
+  },
+  {
+    name: "X profile",
+    id: 2,
     description: "An X(twitter) profile card list.",
     tech: ["Next JS", "React", "FireBase", "PostgreSQL"],
     link: "https://x.hellofaizan.me/",
@@ -153,17 +162,17 @@ export const moreprojects = [
   },
   {
     name: "Cybtracy",
-    id: 2,
+    id: 3,
     description:
       "The official website for Cybtracy, a non-profit organization that aims to provide digital literacy to children in underserved communities.",
     tech: ["Next JS", "Web pack", "TypeScript", "Framer Motion"],
-    link: "https://cybtracy.com/",
+    link: "https://cybtracy.vercel.app/",
     image: cybtracy,
     git: "https://github.com/Cybtracy/webapp-frontend",
   },
   {
     name: "My Portfolio v1",
-    id: 3,
+    id: 4,
     description: "The first version of my portfolio website.",
     tech: ["TypeScript", "Next JS", "Tailwind CSS"],
     link: "https://suei.space",
@@ -171,16 +180,16 @@ export const moreprojects = [
   },
   {
     name: "Studera AI",
-    id: 4,
+    id: 5,
     description:
       "A personalized exam preparation web application (A2SV Generative Hackathon Solution).",
     tech: ["Angular", "Redis", "Nest JS", "MongoDB"],
-    link: "https://studera.onrender.com",
-    git: "https://github.com/darksuei/studera-AI",
+    link: "https://t.ly/8bkcA",
+    git: "https://github.com/Studera-AI",
   },
   {
     name: "Uchegbu Family Tree",
-    id: 5,
+    id: 6,
     description: "Document and save your family tree for future generations.",
     tech: ["JavaScript", "D3 JS", "Mongo DB", "Node JS"],
     link: "https://uchegbu-family-tree.onrender.com/",
@@ -188,7 +197,7 @@ export const moreprojects = [
   },
   {
     name: "Shell Scripts",
-    id: 6,
+    id: 7,
     description:
       "A collection of shell scripts for automating my git workflows.",
     tech: ["Bash Scripting", "Linux Shell"],

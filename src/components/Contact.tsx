@@ -34,7 +34,7 @@ const Contact = forwardRef((props: any, ref: any) => {
           <Link
             target="_blank"
             className="w-fit h-fit relative mt-2"
-            href="mailto:folarinraphael@outlook.com"
+            href="mailto:contact@suei.space"
           >
             <div className="py-2.5 rounded-sm px-14 border-2 border-secondary text-secondary main-btn text-base">
               Say Hi

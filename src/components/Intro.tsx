@@ -52,7 +52,7 @@ export default function Intro() {
         </span>
       </h1>
       <h2 className="text-secondary text-sm md:text-lg font-semibold el w-10/12">
-        SOFTWARE DEVELOPER & TESTER
+        FULLSTACK ENGINEER & BLOCKCHAIN DEVELOPER
       </h2>
       <p className="w-10/12 md:w-8/12 text-xs md:text-base el">
         I excel at creating software solutions that prioritize user-eccentric

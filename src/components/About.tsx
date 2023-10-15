@@ -27,11 +27,11 @@ const About = forwardRef((props: any, ref: any) => {
             Hello! My name is Folarin Raphael, also known as{" "}
             <span className="text-secondary">Suei</span>. I am a{" "}
             <span className="text-white font-medium">
-              FullStack Software developer
+              FullStack Software Engineer
             </span>
             ,{" "}
             <span className="text-white font-medium">
-              Quality Assurance Tester
+              Smart Contract Developer
             </span>{" "}
             and an{" "}
             <span className="text-white font-medium">
