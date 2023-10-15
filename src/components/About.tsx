@@ -1,9 +1,10 @@
 import Link from "next/link";
 import { forwardRef, useContext } from "react";
 import { AboutIcon } from "./icons";
-import { tech } from "@/data";
+import { tech, TechData } from "@/data";
 import { InView } from "react-intersection-observer";
 import { LocationContext } from "@/context/LocationContext";
+import Tech from "./Tech";
 
 const About = forwardRef((props: any, ref: any) => {
   const { setlocation } = useContext(LocationContext);
@@ -15,7 +16,7 @@ const About = forwardRef((props: any, ref: any) => {
   return (
     <InView as="div" onChange={(inView, entry) => handleInView(inView, entry)}>
       <section
-        className=" w-screen md:w-full h-fit md:h-screen flex items-center justify-center my-20 panel"
+        className=" w-screen md:w-full h-fit flex items-center justify-center my-20 panel"
         ref={ref}
       >
         <div className="w-11/12 md:w-8/12 text-primary flex flex-col justify-center p-6 gap-y-4">
@@ -58,14 +59,13 @@ const About = forwardRef((props: any, ref: any) => {
             Here&apos;s a list of some of the technologies I use:
           </h3>
           <div className="md:w-9/12 md:mx-auto flex flex-row flex-wrap gap-x-3 gap-y-3 justify-center">
-            {tech.map((item, index) => {
+            {Object.values(tech).map((item, index) => {
               return (
-                <p
-                  className="border text-white cursor-pointer border-primary py-1 px-3 text-xs"
+                <Tech
+                  title={Object.keys(tech)[index]}
+                  items={item}
                   key={index}
-                >
-                  {item}
-                </p>
+                />
               );
             })}
           </div>

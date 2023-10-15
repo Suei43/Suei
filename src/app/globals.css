@@ -100,3 +100,8 @@ html {
     width: 50%;
   }
 }
+.line {
+  width: 15%;
+  height: 1px;
+  background-color: #8892b0;
+}
