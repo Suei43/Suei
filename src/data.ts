@@ -3,27 +3,6 @@ import cybtracy from "@/assets/cybtracy.png";
 import raphaelly from "@/assets/raphaelly.png";
 import mega from "@/assets/mega.png";
 
-export const technologies = [
-  "JavaScript",
-  "TypeScript",
-  "Apollo-GraphQL",
-  "React & Redux",
-  "Next JS",
-  "NodeJS & Express",
-  "Fastify",
-  "Solidity",
-  "Ethereum",
-  "EtherJS",
-  "SQL & No-SQL Databases",
-  "TypeORM & Mongoose",
-  "Tailwind CSS",
-  "Ant Design",
-  "GSAP",
-  "Unit & E2E Testing",
-  "Azure",
-  "Web Sockets",
-];
-
 export type TechData = {
   Languages: string[];
   Frontend: string[];
@@ -38,7 +17,14 @@ export const tech: TechData = {
   Languages: ["JavaScript", "TypeScript", "Python", "Solidity"],
   Frontend: ["JavaScript", "React", "Redux", "Next JS", "Angular", "WordPress"],
   Styling: ["SCSS", "Tailwind CSS", "Ant Design", "GSAP"],
-  Backend: ["NodeJS & Express", "Fastify", "Apollo-GraphQL", "Azure"],
+  Backend: [
+    "NodeJS & Express",
+    "Fastify",
+    "Apollo-GraphQL",
+    "Azure",
+    "Docker",
+    "Web Sockets",
+  ],
   Database: ["MongoDB", "PostgreSQL", "Redis", "TypeORM", "Mongoose"],
   Blockchain: ["Solidity", "Hardhat", "Ethereum", "EtherJS", "Web3JS"],
   Testing: ["Jest", "React Testing Library", "Cypress", "Mocha"],
