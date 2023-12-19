@@ -17,14 +17,7 @@ export const tech: TechData = {
   Languages: ["JavaScript", "TypeScript", "Python", "Solidity"],
   Frontend: ["JavaScript", "React", "Redux", "Next JS", "Angular", "WordPress"],
   Styling: ["SCSS", "Tailwind CSS", "Ant Design", "GSAP"],
-  Backend: [
-    "NodeJS & Express",
-    "Fastify",
-    "Apollo-GraphQL",
-    "Azure",
-    "Docker",
-    "Web Sockets",
-  ],
+  Backend: ["NodeJS & Express", "Fastify", "Apollo-GraphQL", "Azure", "Docker", "Web Sockets"],
   Database: ["MongoDB", "PostgreSQL", "Redis", "TypeORM", "Mongoose"],
   Blockchain: ["Solidity", "Hardhat", "Ethereum", "EtherJS", "Web3JS"],
   Testing: ["Jest", "React Testing Library", "Cypress", "Mocha"],
@@ -32,6 +25,31 @@ export const tech: TechData = {
 export const experience = [
   {
     id: 1,
+    company: "TechBeaver",
+    title: "FrontEnd Developer",
+    range: "Oct 2023 - Present",
+    url: "https://techbeaver.io/",
+    btn: 1,
+    description: [
+      "Worked in a scrum based team to build software solutions for clients with limited timelines.",
+      "Implemented SOLID development principles to ensure code quality and maintainability.",
+      "Worked closely with the design team to ensure pixel perfect UI/UX.",
+    ],
+  },
+  {
+    id: 2,
+    company: "FunConnect",
+    title: "QA Engineer",
+    range: "Oct 2023 - Present",
+    url: "https://funconnect.app/",
+    btn: 1,
+    description: [
+      "Component Unit and E2E testing on an existing beta software, ensured efficient code quality and maintainability.",
+      "Wrote clear documentation and test cases.",
+    ],
+  },
+  {
+    id: 3,
     company: "Oluadepe Farms Ltd.",
     title: "Software Tester Intern",
     range: "Jun 2023 - Present",
@@ -43,7 +61,7 @@ export const experience = [
     ],
   },
   {
-    id: 2,
+    id: 4,
     company: "Circle-Dodge Systems",
     title: "BackEnd Developer",
     range: "Feb 2023 - Aug 2023",
@@ -55,7 +73,7 @@ export const experience = [
     ],
   },
   {
-    id: 3,
+    id: 5,
     company: "Cybtracy",
     title: "Volunteer",
     range: "Jul 2023 - Present",
@@ -66,20 +84,20 @@ export const experience = [
       "Worked on the social media and marketing team to promote the organization's mission and vision of promoting digital literacy among kids in underserved communities.",
     ],
   },
-  // {
-  //   id: 4,
-  //   company: "",
-  //   title: "A2SV Hackathon Finalist",
-  //   range: "Sep 2023-Nov 2023",
-  //   url: "",
-  //   btn: 4,
-  //   description: [
-  //     "Led a team of 4 to develop a web application that aids students in exam preparation using Generative AI.",
-  //     "Pitched the idea to a panel of judges and investors",
-  //   ],
-  // },
   {
-    id: 4,
+    id: 6,
+    company: "",
+    title: "A2SV Hackathon Semi-finalist",
+    range: "Sep 2023-Nov 2023",
+    url: "",
+    btn: 4,
+    description: [
+      "Led a team of 4 to develop a web application that aids students in exam preparation using Generative AI.",
+      "Pitched the idea to a panel of judges and investors",
+    ],
+  },
+  {
+    id: 7,
     company: "Google Developers Student Community",
     title: "GDSC Core Team Member",
     range: "Aug 2023",
@@ -87,18 +105,7 @@ export const experience = [
     btn: 4,
     description: [
       "Actively engaging the student community by hosting events and talk sessions",
-    ],
-  },
-  {
-    id: 5,
-    company: "alx_africa",
-    title: "Software Engineering Trainee",
-    range: "Jun 2023",
-    url: "",
-    btn: 5,
-    description: [
-      "Learnt the fundamentals of software development including low level programming, data structures and algorithms, and object oriented programming.",
-      "Worked in teams to complete projects using Agile methodologies.",
+      "Hosting game nights and student meet-ups to promote the community",
     ],
   },
 ];
@@ -128,8 +135,7 @@ export const projects = [
   {
     name: "Mega JS Documentation",
     id: 3,
-    description:
-      "The documentation for MEGA JS. An unofficial Javascript sdk for MEGA.nz",
+    description: "The documentation for MEGA JS. An unofficial Javascript sdk for MEGA.nz",
     tech: ["JavaScript", "Docusaurus", "Markdown"],
     link: "https://mega.js.org/",
     image: mega,
@@ -186,8 +192,7 @@ export const moreprojects = [
   {
     name: "Studera AI",
     id: 5,
-    description:
-      "A personalized exam preparation web application (A2SV Generative Hackathon Solution).",
+    description: "A personalized exam preparation web application (A2SV Generative Hackathon Solution).",
     tech: ["Angular", "Redis", "Nest JS", "MongoDB"],
     link: "https://t.ly/8bkcA",
     git: "https://github.com/Studera-AI",
@@ -203,8 +208,7 @@ export const moreprojects = [
   {
     name: "Shell Scripts",
     id: 7,
-    description:
-      "A collection of shell scripts for automating my git workflows.",
+    description: "A collection of shell scripts for automating my git workflows.",
     tech: ["Bash Scripting", "Linux Shell"],
     link: "#",
     git: "https://github.com/darksuei/scripts",

@@ -4,23 +4,23 @@ import Link from "next/link";
 const LinkedIn = (props: { size?: string }) => {
   const [active, setActive] = useState(false);
   return (
-    <Link target="_blank" href="https://www.linkedin.com/in/folarin-raphael">
+    <Link target='_blank' href='https://www.linkedin.com/in/folarin-raphael'>
       <svg
-        xmlns="http://www.w3.org/2000/svg"
+        xmlns='http://www.w3.org/2000/svg'
         width={props.size || "20"}
         height={props.size || "20"}
-        viewBox="0 0 24 24"
-        fill="none"
+        viewBox='0 0 24 24'
+        fill='none'
         stroke={active ? "#0579C3" : "#8892b0"}
-        stroke-width="2"
-        stroke-linecap="round"
-        stroke-linejoin="round"
-        className="social-icon"
+        strokeWidth='2'
+        strokeLinecap='round'
+        strokeLinejoin='round'
+        className='social-icon'
         onMouseEnter={() => setActive(true)}
         onMouseLeave={() => setActive(false)}
       >
-        <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
-        <rect x="2" y="9" width="4" height="12"></rect>
+        <path d='M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z'></path>
+        <rect x='2' y='9' width='4' height='12'></rect>
         {/* <circle cx="4" cy="4" r="2"></circle> */}
       </svg>
     </Link>
