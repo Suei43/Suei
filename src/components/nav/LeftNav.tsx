@@ -1,6 +1,6 @@
 "use client";
 import { useLayoutEffect, useRef } from "react";
-import { Discord, Instagram, LinkedIn, Github, Twitter } from "./icons";
+import { Discord, Instagram, LinkedIn, Github, Twitter } from "../icons";
 import { gsap } from "gsap";
 
 export default function LeftNav() {
@@ -36,20 +36,20 @@ export default function LeftNav() {
       className={`w-12 md:w-16 flex-col-reverse nav-left hidden md:flex fixed box-border left-0 top-0 z-10`}
       ref={leftNav}
     >
-      <div className="w-full flex flex-col items-center justify-center gap-y-10 py-24 md:py-12">
-        <div className="nav">
+      <div className='w-full flex flex-col items-center justify-center gap-y-10 py-24 md:py-12'>
+        <div className='nav'>
           <Discord />
         </div>
-        <div className="nav">
+        <div className='nav'>
           <Github />
         </div>
-        <div className="nav">
+        <div className='nav'>
           <Instagram />
         </div>
-        <div className="nav">
+        <div className='nav'>
           <LinkedIn />
         </div>
-        <div className="nav">
+        <div className='nav'>
           <Twitter />
         </div>
       </div>
