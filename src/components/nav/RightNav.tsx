@@ -1,4 +1,4 @@
-import { AboutIcon, ContactIcon, Exp, Code } from "./icons";
+import { AboutIcon, ContactIcon, Exp, Code } from "../icons";
 import React, { useLayoutEffect, useEffect, useContext } from "react";
 import { gsap } from "gsap";
 import { LocationContext } from "@/context/LocationContext";
@@ -97,35 +97,26 @@ export default function RightNav(props: {
   // }, [location]);
 
   return (
-    <div className="nav-right w-11 md:w-14 flex flex-col items-end justify-center fixed right-0 top-0 z-10">
-      <div className="nav-right-top"></div>
-      <nav className="w-full flex flex-col items-center justify-center gap-y-12 md:gap-y-14 py-12">
-        <div className="nav" onClick={(e) => handleScroll(e, "about")}>
-          <AboutIcon
-            stroke={location === "about" ? "#0579C3" : "#8892b0"}
-            size={width > 900 ? "22" : "19"}
-          />
+    <div className='nav-right w-11 md:w-14 flex flex-col items-end justify-center fixed right-0 top-0 z-10'>
+      <div className='nav-right-top'></div>
+      <nav className='w-full flex flex-col items-center justify-center gap-y-12 md:gap-y-14 py-12'>
+        <div className='nav' onClick={(e) => handleScroll(e, "about")}>
+          <AboutIcon stroke={location === "about" ? "#0579C3" : "#8892b0"} size={width > 900 ? "22" : "19"} />
         </div>
-        <div className="nav" onClick={(e) => handleScroll(e, "exp")}>
-          <Exp
-            stroke={location === "exp" ? "#0579C3" : "#8892b0"}
-            size={width > 900 ? "28" : "24"}
-          />
+        <div className='nav' onClick={(e) => handleScroll(e, "exp")}>
+          <Exp stroke={location === "exp" ? "#0579C3" : "#8892b0"} size={width > 900 ? "28" : "24"} />
         </div>
-        <div className="nav" onClick={(e) => handleScroll(e, "proj")}>
-          <Code
-            stroke={location === "proj" ? "#0579C3" : "#8892b0"}
-            size={width > 900 ? "30" : "25"}
-          />
+        <div className='nav' onClick={(e) => handleScroll(e, "proj")}>
+          <Code stroke={location === "proj" ? "#0579C3" : "#8892b0"} size={width > 900 ? "30" : "25"} />
         </div>
-        <div className="nav" onClick={(e) => handleScroll(e, "contact")}>
+        <div className='nav' onClick={(e) => handleScroll(e, "contact")}>
           <ContactIcon
             stroke={location === "contact" ? "#0579C3" : "#8892b0"}
             size={width > 900 ? "28" : "24"}
           />
         </div>
       </nav>
-      <div className="nav-right-bottom"></div>
+      <div className='nav-right-bottom'></div>
     </div>
   );
 }

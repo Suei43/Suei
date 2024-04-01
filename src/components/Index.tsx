@@ -3,13 +3,13 @@ import { Fragment, useEffect, useLayoutEffect, useRef, useState } from "react";
 import { gsap } from "gsap";
 
 // Components
-import LeftNav from "@/components/LeftNav";
-import RightNav from "@/components/RightNav";
-import Main from "@/components/Main";
-import About from "@/components/About";
-import Contact from "@/components/Contact";
-import Projects from "@/components/Projects";
-import Experience from "@/components/Experience";
+import LeftNav from "@/components/nav/LeftNav";
+import RightNav from "@/components/nav/RightNav";
+import Main from "@/components/sections/Main";
+import About from "@/components/sections/About";
+import Contact from "@/components/sections/Contact";
+import Projects from "@/components/sections/Projects";
+import Experience from "@/components/sections/Experience";
 import Loading from "@/components/loading";
 import { LocationContext } from "@/context/LocationContext";
 
@@ -41,28 +41,28 @@ const Index = () => {
   }, [loading]);
   return (
     <LocationContext.Provider value={{ location, setlocation }}>
-      <Fragment>
-        {loading ? (
-          <Loading />
-        ) : (
-          <main className="w-screen flex flex-col box-border curr" ref={doc}>
-            <div className="relative h-screen w-full box-border">
-              <LeftNav />
-              <RightNav
-                aboutScrollRef={aboutScrollRef}
-                expScrollRef={expScrollRef}
-                projScrollRef={projScrollRef}
-                contactScrollRef={contactScrollRef}
-              />
+      {loading ? (
+        <Loading />
+      ) : (
+        <Fragment>
+          <div className='fixed h-screen w-full box-border'>
+            <LeftNav />
+            <RightNav
+              aboutScrollRef={aboutScrollRef}
+              expScrollRef={expScrollRef}
+              projScrollRef={projScrollRef}
+              contactScrollRef={contactScrollRef}
+            />
+          </div>
+          <div className='w-screen flex flex-col box-border' ref={doc}>
               <Main />
-            </div>
-            <About ref={aboutScrollRef} />
-            <Experience ref={expScrollRef} />
-            <Projects ref={projScrollRef} />
-            <Contact ref={contactScrollRef} />
-          </main>
-        )}
-      </Fragment>
+              <About ref={aboutScrollRef} />
+              <Experience ref={expScrollRef} />
+              <Projects ref={projScrollRef} />
+              <Contact ref={contactScrollRef} />
+          </div>
+        </Fragment>
+      )}
     </LocationContext.Provider>
   );
 };

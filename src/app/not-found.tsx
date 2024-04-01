@@ -2,7 +2,7 @@
 
 import { Fragment, useState, useEffect, useLayoutEffect } from "react";
 import Loading from "@/components/loading";
-import LeftNav from "@/components/LeftNav";
+import LeftNav from "@/components/nav/LeftNav";
 import NotFound from "@/components/NotFound";
 import { gsap } from "gsap";
 
@@ -30,8 +30,8 @@ export default function Custom404() {
       {loading ? (
         <Loading />
       ) : (
-        <main className="w-screen flex flex-col box-border curr">
-          <div className="relative h-screen w-full box-border">
+        <main className='w-screen flex flex-col box-border curr'>
+          <div className='relative h-screen w-full box-border'>
             <LeftNav />
             <NotFound />
           </div>
