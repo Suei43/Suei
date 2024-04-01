@@ -19,10 +19,10 @@ export const tech: TechData = {
   Frontend: ["Vanilla JavaScript", "React", "Redux", "Next JS", "Svelte", "GSAP"],
   Styling: ["SCSS", "Tailwind CSS", "Ant Design", "Bootstrap", "Chakra UI"],
   Backend: ["Node JS", "Nest JS", "Spring Boot", "Apollo-GraphQL", "Redis", "Dapr", "Kafka"],
-  Cloud: ["Docker", "Azure"],
+  Cloud: ["Docker", "Kubernetes", "AWS"],
   Database: ["MongoDB", "PostgreSQL", "MySQL", "Firebase"],
   Blockchain: ["Solidity", "Hardhat", "Ethereum", "EtherJS", "Web3JS"],
-  Testing: ["Jest", "React Testing Library", "Cypress", "Mocha"],
+  Testing: ["Jest", "React Testing Library", "Cypress"],
 };
 export const experience = [
   {
