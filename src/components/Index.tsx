@@ -41,28 +41,28 @@ const Index = () => {
   }, [loading]);
   return (
     <LocationContext.Provider value={{ location, setlocation }}>
-      <Fragment>
-        {loading ? (
-          <Loading />
-        ) : (
-          <main className='w-screen flex flex-col box-border curr' ref={doc}>
-            <div className='relative h-screen w-full box-border'>
-              <LeftNav />
-              <RightNav
-                aboutScrollRef={aboutScrollRef}
-                expScrollRef={expScrollRef}
-                projScrollRef={projScrollRef}
-                contactScrollRef={contactScrollRef}
-              />
+      {loading ? (
+        <Loading />
+      ) : (
+        <Fragment>
+          <div className='fixed h-screen w-full box-border'>
+            <LeftNav />
+            <RightNav
+              aboutScrollRef={aboutScrollRef}
+              expScrollRef={expScrollRef}
+              projScrollRef={projScrollRef}
+              contactScrollRef={contactScrollRef}
+            />
+          </div>
+          <div className='w-screen flex flex-col box-border' ref={doc}>
               <Main />
-            </div>
-            <About ref={aboutScrollRef} />
-            <Experience ref={expScrollRef} />
-            <Projects ref={projScrollRef} />
-            <Contact ref={contactScrollRef} />
-          </main>
-        )}
-      </Fragment>
+              <About ref={aboutScrollRef} />
+              <Experience ref={expScrollRef} />
+              <Projects ref={projScrollRef} />
+              <Contact ref={contactScrollRef} />
+          </div>
+        </Fragment>
+      )}
     </LocationContext.Provider>
   );
 };

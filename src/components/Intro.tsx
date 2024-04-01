@@ -46,25 +46,20 @@ export default function Intro() {
         isVisible ? " flex " : "hidden"
       }`}
     >
-      <h1 className="text-5xl md:text-7xl text-white font-black el">
-        <span className="hover:text-secondary hover:cursor-pointer w-fit h-fit">
-          Folarin Raphael.
-        </span>
+      <h1 className='text-5xl md:text-7xl text-white font-black el'>
+        <span className='hover:text-secondary hover:cursor-pointer w-fit h-fit'>Folarin Raphael.</span>
       </h1>
-      <h2 className="text-secondary text-sm md:text-lg font-semibold el w-10/12">
-        FULLSTACK ENGINEER & BLOCKCHAIN DEVELOPER
+      <h2 className='text-secondary text-sm md:text-lg font-semibold el w-10/12'>
+        SOFTWARE ENGINEER & BLOCKCHAIN DEVELOPER
       </h2>
-      <p className="w-10/12 md:w-8/12 text-xs md:text-base el">
-        I excel at creating software solutions that prioritize user-eccentric
-        digital experiences.{" "}
-        <span className="md:block hidden">
-          Additionally, I have a talent for diagnosing and improving systems.
-        </span>
+      <p className='w-10/12 md:w-8/12 text-xs md:text-base el'>
+        I build solid and scalable software with eccentric user experiences and I have a knack for diagnosing
+        and improving existing systems.
       </p>
-      <div className="relative w-fit h-fit mt-5 rounded-lg el">
+      <div className='relative w-fit h-fit mt-5 rounded-lg el'>
         <button
           onClick={(e) => handleResumeClick(e)}
-          className="text-secondary border-2 border-secondary rounded-sm py-3 w-40 main-btn text-xs md:text-md"
+          className='text-secondary border-2 border-secondary rounded-sm py-3 w-40 main-btn text-xs md:text-md'
         >
           Résumé
         </button>
