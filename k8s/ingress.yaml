@@ -1,9 +1,7 @@
 apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
-  name: portfolio
-  annotations:
-    nginx.ingress.kubernetes.io/rewrite-target: /
+  name: portfolio-ingress
 spec:
   rules:
     - host: suei.dev
@@ -13,6 +11,6 @@ spec:
             pathType: Prefix
             backend:
               service:
-                name: portfolio
+                name: portfolio-service
                 port:
-                  number: 80
+                  number: 3000
