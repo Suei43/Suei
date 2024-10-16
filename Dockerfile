@@ -28,7 +28,7 @@ WORKDIR /app
 # Copy only the necessary files for production
 COPY --from=builder /app/.next ./.next
 COPY --from=builder /app/package*.json ./
-COPY --from=builder /app/next.config.mjs ./
+COPY --from=builder /app/next.config.js ./
 
 # Install only production dependencies
 RUN npm install --legacy-peer-deps --only=production
