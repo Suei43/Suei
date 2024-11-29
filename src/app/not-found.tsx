@@ -1,9 +1,9 @@
 "use client";
 
 import { Fragment, useState, useEffect, useLayoutEffect } from "react";
-import Loading from "@/components/loading";
+import Loading from "@/components/sub-components/Loading";
 import LeftNav from "@/components/nav/LeftNav";
-import NotFound from "@/components/NotFound";
+import NotFound from "@/components/sub-components/NotFound";
 import { gsap } from "gsap";
 
 export default function Custom404() {

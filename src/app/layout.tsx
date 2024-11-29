@@ -10,7 +10,7 @@ const chakra = Chakra_Petch({
 });
 
 export const metadata: Metadata = {
-  title: "Folarin Raphael",
+  title: "Portfolio | Folarin Raphael",
   description: "Folarin's personal portfolio",
   applicationName: "Folarin Raphael",
   referrer: "origin-when-cross-origin",

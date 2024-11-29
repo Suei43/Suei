@@ -1,22 +1,22 @@
 import Image from "next/image";
 import Link from "next/link";
-import avatar from "@/assets/sueiavatar.jpeg";
+import avatar from "@/assets/img/darksuei.jpeg";
 import gsap from "gsap";
 import { useLayoutEffect } from "react";
 
 const Me = () => {
   useLayoutEffect(() => {
     gsap.to(".avatar-img", {
-      delay: 2,
-      x: -10,
-      y: -10,
+      delay: 1,
+      x: -12.5,
+      y: -12.5,
       duration: 1,
       ease: "power2.out",
     });
   }, []);
   return (
-    <Link href={"/"} className='absolute top-4 right-4 md:block hidden avatar'>
-      <Image src={avatar} alt='' width={70} quality={100} className='avatar-img' />
+    <Link href={"/"} className='absolute top-10 right-10 md:block hidden gradient-border'>
+      <Image src={avatar} alt='' width={125} quality={100} className='avatar-img' />
     </Link>
   );
 };

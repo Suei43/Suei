@@ -14,11 +14,11 @@ const ProjectCards = () => {
   };
 
   return (
-    <section className="w-full p-6 flex flex-row flex-wrap items-center justify-center gap-y-10 gap-x-10">
+    <section className="w-full p-6 flex flex-row flex-wrap items-center justify-center gap-y-10 gap-x-10 bg-red-300">
       {projects.map((project: any) => {
         return (
           <div
-            className="w-60 h-60 h-fit border-2 rounded-lg border-primary p-4 box-border flex flex-col gap-y-4 proj-card"
+            className="w-60 h-fit border-2 rounded-lg border-primary p-4 box-border flex flex-col gap-y-4 proj-card"
             key={project.id}
           >
             <div className="flex flex-row items-center justify-end gap-x-3 w-full">

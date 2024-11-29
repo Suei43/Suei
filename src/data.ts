@@ -1,7 +1,16 @@
-import cloudwave from "@/assets/cloudwave.jpg";
-import cybtracy from "@/assets/cybtracy.png";
-import raphaelly from "@/assets/raphaelly.png";
-import mega from "@/assets/mega.png";
+import cloudwave from "@/assets/img/cloudwave.jpg";
+import cybtracy from "@/assets/img/cybtracy.png";
+import raphaelly from "@/assets/img/raphaelly.png";
+import mega from "@/assets/img/mega.png";
+import angular from "@/assets/svg/angular.svg";
+import aws from "@/assets/svg/aws.svg";
+import docker from "@/assets/svg/docker.svg";
+import gcp from "@/assets/svg/gcp.svg";
+import go from "@/assets/svg/go.svg";
+import kubernetes from "@/assets/svg/kubernetes.svg";
+import mysql from "@/assets/svg/mysql.svg";
+import nodejs from "@/assets/svg/nodejs.svg";
+import react from "@/assets/svg/react.svg";
 
 export type TechData = {
   Languages: string[];
@@ -13,6 +22,8 @@ export type TechData = {
   Testing: string[];
   Cloud: string[];
 };
+
+export const technologies = [angular, aws, docker, gcp, go, kubernetes, mysql, nodejs, react];
 
 export const tech: TechData = {
   Languages: ["JavaScript", "TypeScript", "Java", "Solidity"],
@@ -106,25 +117,25 @@ export const projects = [
     id: 1,
     description:
       "A cloud storage web application where users can upload, share, preview and store files and media for free.",
-    tech: ["React", "Node JS", "Mega JS", "Mongo DB", "Million JS", "Docker"],
+    tech: ["React", "Node JS", "Million JS"],
     link: "https://cloud-wave-x9iy.onrender.com/",
     image: cloudwave,
     git: "https://github.com/darksuei/cloudwave",
   },
-  {
-    name: "Image Vision API",
-    id: 2,
-    description:
-      "An image recognition API created using the tensorflow mobile-net computer vision model for image recognition.",
-    tech: ["TypeScript", "Fastify", "TypeORM", "Tensorflow JS", "Mongo DB"],
-    link: "https://image-vision-api.onrender.com/",
-    image: "",
-    demo: "https://image-vison-demo.vercel.app/",
-    git: "https://github.com/darksuei/imagevision",
-  },
+  // {
+  //   name: "Image Vision API",
+  //   id: 2,
+  //   description:
+  //     "An image recognition API created using the tensorflow mobile-net computer vision model for image recognition.",
+  //   tech: ["TypeScript", "Fastify", "TypeORM", "Tensorflow JS", "Mongo DB"],
+  //   link: "https://image-vision-api.onrender.com/",
+  //   image: "",
+  //   demo: "https://image-vison-demo.vercel.app/",
+  //   git: "https://github.com/darksuei/imagevision",
+  // },
   {
     name: "Mega JS Documentation",
-    id: 3,
+    id: 2,
     description: "The documentation for MEGA JS. An unofficial Javascript sdk for MEGA.nz",
     tech: ["JavaScript", "Docusaurus", "Markdown"],
     link: "https://mega.js.org/",
@@ -133,10 +144,10 @@ export const projects = [
   },
   {
     name: "Raphaelly Editorials Services",
-    id: 4,
+    id: 3,
     description:
       "The official website for an editorial organization focused on project research and marketing consultancy.",
-    tech: ["JavaScript", "Tailwind CSS", "Django", "PostgreSQL"],
+    tech: ["JavaScript", "Django", "PostgreSQL"],
     link: "https://raphaellyeditorial.netlify.app/",
     image: raphaelly,
     git: "https://github.com/darksuei/raphaellyeditorials",

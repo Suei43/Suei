@@ -1,6 +1,7 @@
 "use client";
 import React, { useLayoutEffect, useState } from "react";
 import { gsap } from "gsap";
+import Link from "next/link";
 
 export default function Intro() {
   const [isVisible, setIsVisible] = useState(false);
@@ -31,7 +32,7 @@ export default function Intro() {
             opacity: 1,
             ease: "power2.out",
             stagger: 0.2,
-          }
+          },
         );
       });
     }, 2400);
@@ -42,24 +43,37 @@ export default function Intro() {
 
   return (
     <div
-      className={`absolute bottom-0 left-0 md:left-16 p-8 md:p-20 h-4/6 flex-col gap-y-4 w-full md:w-10/12 text-primary box-border ${
+      className={`absolute bottom-[15%] left-0 md:left-[5%] p-8 md:p-20 h-fit flex-col gap-y-4 w-full md:w-10/12 text-primary box-border ${
         isVisible ? " flex " : "hidden"
       }`}
     >
-      <h1 className='text-5xl md:text-7xl text-white font-black el'>
-        <span className='hover:text-secondary hover:cursor-pointer w-fit h-fit'>Folarin Raphael.</span>
+      <h1 className="text-5xl md:text-7xl text-white font-black el">
+        <span className="hover:cursor-pointer w-fit h-fit">
+          Folarin Raphael.
+        </span>
       </h1>
-      <h2 className='text-secondary text-sm md:text-lg font-semibold el w-10/12'>
-        SOFTWARE ENGINEER & BLOCKCHAIN DEVELOPER
+      <h2 className="text-secondary text-sm md:text-lg font-semibold el w-10/12">
+        CLOUD NATIVE SOFTWARE ENGINEER
       </h2>
-      <p className='w-10/12 md:w-8/12 text-xs md:text-base el'>
-        I build solid and scalable software with eccentric user experiences and I have a knack for diagnosing
-        and improving existing systems.
+      <p className="w-10/12 md:w-8/12 text-xs md:text-base el">
+        I build scalable, reliable software with exceptional user experiences. I
+        specialize in diagnosing and enhancing existing systems to improve
+        performance and usability.
       </p>
-      <div className='relative w-fit h-fit mt-5 rounded-lg el'>
+      <p className="">
+        Looking for my{" "}
+        <Link
+          href={"https://blog.suei.dev"}
+          className="text-secondary hover:underline"
+          target="_blank"
+        >
+          blog?
+        </Link>
+      </p>
+      <div className="relative w-fit h-fit mt-5 rounded-lg el">
         <button
           onClick={(e) => handleResumeClick(e)}
-          className='text-secondary border-2 border-secondary rounded-sm py-3 w-40 main-btn text-xs md:text-md'
+          className="text-secondary border-2 border-secondary rounded-sm py-3 w-40 main-btn text-xs md:text-md"
         >
           Résumé
         </button>

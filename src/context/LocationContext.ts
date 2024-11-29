@@ -6,6 +6,6 @@ interface LocationContextInterface {
 }
 
 export const LocationContext = createContext<LocationContextInterface>({
-  location: "",
+  location: "home",
   setlocation: () => {},
 });
