@@ -46,17 +46,18 @@ export const metadata: Metadata = {
   ],
   openGraph: {
     title: "Folarin Raphael",
-    description: "Folarin's personal portfolio",
+    description:
+      "Folarin is a cloud native software engineer, passionate about open source and building scalable systems.",
     url: "https://suei.dev",
     siteName: "Folarin Raphael",
     locale: "en_US",
     type: "website",
     images: [
       {
-        url: "/og-clover.png",
+        url: "/public/og-clover.png",
         width: 1200,
         height: 630,
-        alt: "Suei's Portfolio Cover",
+        alt: "suei_cover",
       },
     ],
   },
