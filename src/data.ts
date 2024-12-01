@@ -1,206 +1,173 @@
-import cloudwave from "@/assets/cloudwave.jpg";
-import cybtracy from "@/assets/cybtracy.png";
-import raphaelly from "@/assets/raphaelly.png";
-import mega from "@/assets/mega.png";
+import cloudwave from "@/assets/img/_cloudwave.png";
+import raphaelly from "@/assets/img/raphaelly.png";
+import krowdfi from "@/assets/img/_krowdfi.png";
+import angular from "@/assets/svg/angular.svg";
+import aws from "@/assets/svg/aws.svg";
+import docker from "@/assets/svg/docker.svg";
+import gcp from "@/assets/svg/gcp.svg";
+import go from "@/assets/svg/go.svg";
+import kubernetes from "@/assets/svg/kubernetes.svg";
+import mysql from "@/assets/svg/mysql.svg";
+import nodejs from "@/assets/svg/nodejs.svg";
+import react from "@/assets/svg/react.svg";
+import kuberpc from "@/assets/img/kuberpc.png";
+import kafresh from "@/assets/img/kafresh.png";
+import typescript from "@/assets/svg/typescript.svg";
+import dotnet from "@/assets/svg/dotnet.svg";
+import firebase from "@/assets/svg/firebase.svg";
+import tailwind from "@/assets/svg/tailwind.svg";
+import mongo from "@/assets/svg/mongo.svg";
+import helm from "@/assets/svg/helm.svg";
+import redis from "@/assets/svg/redis.svg";
 
-export type TechData = {
-  Languages: string[];
-  Frontend: string[];
-  Backend: string[];
-  Styling: string[];
-  Database: string[];
-  Blockchain: string[];
-  Testing: string[];
-  Cloud: string[];
-};
+export const technologies = [
+  go,
+  typescript,
+  angular,
+  react,
+  tailwind,
+  nodejs,
+  dotnet,
+  gcp,
+  aws,
+  docker,
+  kubernetes,
+  helm,
+  firebase,
+  redis,
+  mysql,
+  mongo,
+];
 
-export const tech: TechData = {
-  Languages: ["JavaScript", "TypeScript", "Java", "Solidity"],
-  Frontend: ["Vanilla JavaScript", "React", "Redux", "Next JS", "Svelte", "GSAP"],
-  Styling: ["SCSS", "Tailwind CSS", "Ant Design", "Bootstrap", "Chakra UI"],
-  Backend: ["Node JS", "Nest JS", "Spring Boot", "Apollo-GraphQL", "Redis", "Dapr", "Kafka"],
-  Cloud: ["Docker", "Kubernetes", "AWS"],
-  Database: ["MongoDB", "PostgreSQL", "MySQL", "Firebase"],
-  Blockchain: ["Solidity", "Hardhat", "Ethereum", "EtherJS", "Web3JS"],
-  Testing: ["Jest", "React Testing Library", "Cypress"],
-};
 export const experience = [
   {
     id: 1,
-    company: "TechBeaver",
-    title: "FrontEnd Developer",
-    range: "Nov 2023 - Present",
-    url: "https://techbeaver.io/",
+    company: "NewWave Telecom and Technologies.",
+    title: "Sofware Engineer",
+    range: "December 2023 - Present",
+    url: "https://newwave.io/",
     btn: 1,
     description: [
-      "Worked in a scrum based team to build software solutions for clients with limited timelines.",
-      "Implemented SOLID development principles to ensure code quality and maintainability.",
-      "Worked closely with the design team to ensure pixel perfect UI/UX.",
+      "Collaborated with a talented Agile team to deliver innovative fintech solutions, leveraging microservices architecture across Node.js, Spring Boot, .NET, and Python.",
+      "Developed cloud-native applications, utilizing tools from the CNCF ecosystem to ensure scalability, reliability, and performance.",
+      "Emphasized code quality through comprehensive unit testing and adherence to development best practices, ensuring maintainability and robustness.",
+      "Worked in close synergy with cross-functional teams to achieve seamless integration of design and functionality while meeting tight deadlines.",
     ],
   },
   {
     id: 2,
-    company: "FunConnect",
-    title: "QA Engineer",
-    range: "Oct 2023 - Dec 2023",
-    url: "https://funconnect.app/",
+    company: "TechBeaver",
+    title: "FrontEnd Developer",
+    range: "November 2023 - November 2024",
+    url: "https://techbeaver.io/",
     btn: 1,
     description: [
-      "Component Unit and E2E testing on an existing beta software, ensured efficient code quality and maintainability.",
-      "Wrote clear documentation and test cases.",
+      "Served as a Frontend Developer at TechBeaver, contributing to three impactful projects: two internal applications and one client-facing solution.",
+      "Built responsive and user-friendly interfaces using frameworks such as React and Angular, leveraging styling tools like SCSS, Bootstrap, Chakra UI, and Tailwind CSS.",
+      "Collaborated within a Scrum-based team, participating in daily standups and delivering features incrementally to meet project timelines.",
+      "Focused on creating engaging user experiences by ensuring cross-browser compatibility, performance optimization, and adherence to modern design principles.",
     ],
   },
   {
     id: 3,
-    company: "Oluadepe Farms Ltd.",
-    title: "Software Tester Intern",
-    range: "Jun 2023 - Oct 2023",
-    url: "",
+    company: "FunConnect",
+    title: "Quality Assurance Engineer",
+    range: "October 2023 - December 2023",
+    url: "https://funconnect.app/",
     btn: 1,
     description: [
-      "Component Unit and E2E testing on an existing code base, ensured efficient code quality and maintainability.",
-      "Promoted Test Driven Development (TDD) and wrote clear documentation for the code base and test cases.",
+      "Conducted comprehensive testing of software systems, including APIs, a mobile application, and a web application, ensuring functionality, reliability, and performance.",
+      "Authored clear and concise documentation, including test plans and reports, to facilitate transparency and collaboration within the team.",
+      "Ensured code quality and maintainability by rigorously following established testing guidelines and standards.",
     ],
   },
   {
     id: 4,
     company: "Circle-Dodge Systems",
     title: "BackEnd Developer",
-    range: "Feb 2023 - Sept 2023",
+    range: "January 2023 - August 2023",
     url: "",
     btn: 2,
     description: [
-      "Worked in collaboration with a team to build and maintain the backend for a robust restaurant management system.",
-      "Implemented SOLID development principles to ensure code quality and maintainability.",
+      "Collaborated as a Backend Developer on a team to design and maintain the backend architecture for a SaaS-based restaurant management system, leveraging Next.js, Express, and MongoDB.",
+      "Focused on writing clean, maintainable code by implementing SOLID principles, ensuring scalability and robustness despite the project not reaching production.",
     ],
   },
   {
     id: 5,
-    company: "Cybtracy",
-    title: "Volunteer",
-    range: "Jul 2023 - Present",
-    url: "https://cybtracy.com",
-    btn: 3,
-    description: [
-      "Led a small team to build the official website of the organization",
-      "Worked on the social media and marketing team to promote the organization's mission and vision of promoting digital literacy among kids in underserved communities.",
-    ],
-  },
-  {
-    id: 6,
-    company: "",
-    title: "A2SV Hackathon Semi-finalist",
-    range: "Sep 2023-Nov 2023",
-    url: "",
+    company: "Africa to Silicon Valley (A2SV)",
+    title: "Hackathon Semi-finalist",
+    range: "September 2023",
+    url: "https://a2sv.org/",
     btn: 4,
     description: [
-      "Led a team of 4 to develop a web application that aids students in exam preparation using Generative AI.",
-      "Pitched the idea to a panel of judges and investors",
+      "Led a team of four to develop a Generative AI-powered web application designed to help students accelerate their exam preparation by generating tailored resources and summaries based on input timelines.",
+      "Built the application using Angular, Node.js, TypeScript, Redis, and SQLite, focusing on performance and usability. Pitched the concept to a panel of judges and investors, showcasing its potential to enhance student performance through AI-driven solutions.",
     ],
   },
 ];
 
 export const projects = [
   {
-    name: "Cloud Wave",
+    name: "Cloudwave",
     id: 1,
     description:
       "A cloud storage web application where users can upload, share, preview and store files and media for free.",
-    tech: ["React", "Node JS", "Mega JS", "Mongo DB", "Million JS", "Docker"],
-    link: "https://cloud-wave-x9iy.onrender.com/",
+    tech: ["React", "Node JS", "MongoDB", "Mega"],
+    link: "https://cloudwave.ink",
     image: cloudwave,
     git: "https://github.com/darksuei/cloudwave",
   },
   {
-    name: "Image Vision API",
+    name: "Krowdfi",
     id: 2,
-    description:
-      "An image recognition API created using the tensorflow mobile-net computer vision model for image recognition.",
-    tech: ["TypeScript", "Fastify", "TypeORM", "Tensorflow JS", "Mongo DB"],
-    link: "https://image-vision-api.onrender.com/",
-    image: "",
-    demo: "https://image-vison-demo.vercel.app/",
-    git: "https://github.com/darksuei/imagevision",
+    description: "A crowdfunding platform for exporters and backers to connect and fund campaigns.",
+    tech: ["React", "Typescript", "Firebase"],
+    link: "https://krowdfi.com/",
+    image: krowdfi,
+    git: "",
   },
   {
-    name: "Mega JS Documentation",
+    name: "KubeRPC",
     id: 3,
-    description: "The documentation for MEGA JS. An unofficial Javascript sdk for MEGA.nz",
-    tech: ["JavaScript", "Docusaurus", "Markdown"],
-    link: "https://mega.js.org/",
-    image: mega,
-    git: "https://github.com/qgustavor/megajs-docs",
-  },
-  {
-    name: "Raphaelly Editorials Services",
-    id: 4,
     description:
-      "The official website for an editorial organization focused on project research and marketing consultancy.",
-    tech: ["JavaScript", "Tailwind CSS", "Django", "PostgreSQL"],
-    link: "https://raphaellyeditorial.netlify.app/",
-    image: raphaelly,
-    git: "https://github.com/darksuei/raphaellyeditorials",
+      "A lightweight kubernetes-native RPC framework designed to enable low-latency communication.",
+    tech: ["Go", "Kubernetes", "Redis"],
+    link: "https://blog.suei.dev/posts/yet_another_rpc_framework/",
+    image: kuberpc,
+    git: "https://github.com/darksuei/kuberpc",
   },
 ];
 
 export const moreprojects = [
   {
-    name: "ERC20 Token Transfer Contract",
-    id: 1,
-    description:
-      "Manage and transfer ERC-20 tokens with support for multiple tokens and ensuring secure and controlled token transfers.",
-    tech: ["Solidity", "Alchemy", "Hardhat", "TypeScript"],
-    link: "https://sepolia.etherscan.io/address/0x920bE130B50Dc729e778C8b4DcFE5A94D733AbF6",
-    git: "https://github.com/darksuei/Erc20-token-transfer",
-  },
-  {
-    name: "X profile",
-    id: 2,
-    description: "An X(twitter) profile card list.",
-    tech: ["Next JS", "React", "FireBase", "PostgreSQL"],
-    link: "https://x.hellofaizan.me/",
-    git: "https://github.com/hellofaizan/xprofile",
-  },
-  {
-    name: "Cybtracy",
-    id: 3,
-    description:
-      "The official website for Cybtracy, a non-profit organization that aims to provide digital literacy to children in underserved communities.",
-    tech: ["Next JS", "Web pack", "TypeScript", "Framer Motion"],
-    link: "https://cybtracy.vercel.app/",
-    image: cybtracy,
-    git: "https://github.com/Cybtracy/webapp-frontend",
-  },
-  {
-    name: "My Portfolio v1",
+    name: "KaFresh",
     id: 4,
-    description: "The first version of my portfolio website.",
-    tech: ["TypeScript", "Next JS", "Tailwind CSS"],
-    link: "https://suei.space",
-    git: "https://github.com/darksuei/suei",
+    description:
+      "The official website of an agro-processing company focused on extending the shelf life of farm produce.",
+    tech: ["Angular", "Typescript", "Firebase"],
+    link: "https://siovalley.tech/",
+    image: kafresh,
+    git: "",
   },
   {
-    name: "Studera AI",
+    name: "Raphaelly Editorials",
     id: 5,
-    description: "A personalized exam preparation web application (A2SV Generative Hackathon Solution).",
-    tech: ["Angular", "Redis", "Nest JS", "MongoDB"],
-    link: "https://t.ly/8bkcA",
-    git: "https://github.com/Studera-AI",
+    description:
+      "The official website for an editorial organization focused on project research and marketing consultancy.",
+    tech: ["JavaScript", "Django", "PostgreSQL"],
+    link: "https://raphaellyeditorial.netlify.app/",
+    image: raphaelly,
+    git: "https://github.com/darksuei/raphaellyeditorials",
   },
   {
-    name: "Uchegbu Family Tree",
+    name: "KubeRPC",
     id: 6,
-    description: "Document and save your family tree for future generations.",
-    tech: ["JavaScript", "D3 JS", "Mongo DB", "Node JS"],
-    link: "https://uchegbu-family-tree.onrender.com/",
-    git: "https://github.com/darksuei/family-tree",
-  },
-  {
-    name: "Shell Scripts",
-    id: 7,
-    description: "A collection of shell scripts for automating my git workflows.",
-    tech: ["Bash Scripting", "Linux Shell"],
-    link: "#",
-    git: "https://github.com/darksuei/scripts",
+    description:
+      "A lightweight kubernetes-native RPC framework designed to enable low-latency communication.",
+    tech: ["Go", "Kubernetes", "Redis"],
+    link: "https://blog.suei.dev/posts/yet_another_rpc_framework/",
+    image: kuberpc,
+    git: "https://github.com/darksuei/kuberpc",
   },
 ];

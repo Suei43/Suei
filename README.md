@@ -1,3 +1,3 @@
-## My portfolio 网站
+## My portfolio
 
-Welcome to the repository that powers https://suei.space.
+Welcome to the repository that powers https://suei.dev.
