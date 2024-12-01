@@ -5,10 +5,10 @@ import TopNav from "../nav/TopNav";
 import { InView } from "react-intersection-observer";
 import { LocationContext } from "@/context/LocationContext";
 
-const Main = forwardRef((_: any, ref: any) => {
+const Main = forwardRef((_props: any, ref: any) => {
   const { setlocation } = useContext(LocationContext);
 
-  const handleInView = (inView: boolean, _: any) => {
+  const handleInView = (inView: boolean, _entry: any) => {
     if (inView) {
       setlocation("home");
     }
@@ -16,7 +16,7 @@ const Main = forwardRef((_: any, ref: any) => {
 
   return (
     <InView as='div' onChange={(inView, entry) => handleInView(inView, entry)}>
-      <section className='w-full md:w-11/12 md:mx-auto h-screen relative box-border' ref={ref}>
+      <section className='w-11/12 md:mx-auto h-screen box-border relative' ref={ref}>
         <TopNav />
         <Me />
         <Intro />

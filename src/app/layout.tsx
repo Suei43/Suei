@@ -10,11 +10,11 @@ const chakra = Chakra_Petch({
 });
 
 export const metadata: Metadata = {
-  title: "Portfolio | Folarin Raphael",
+  title: "Folarin Raphael | Portfolio",
   description: "Folarin's personal portfolio",
   applicationName: "Folarin Raphael",
   referrer: "origin-when-cross-origin",
-  authors: [{ name: "Suei" }],
+  authors: [{ name: "Folarin Raphael" }],
   creator: "Folarin Raphael",
   publisher: "Folarin Raphael",
   icons: [
@@ -47,28 +47,24 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Folarin Raphael",
     description: "Folarin's personal portfolio",
-    url: "https://suei.space",
+    url: "https://suei.dev",
     siteName: "Folarin Raphael",
     locale: "en_US",
     type: "website",
     images: [
       {
-        url: "/og-image.jpeg",
+        url: "/og-clover.png",
         width: 1200,
         height: 630,
-        alt: "",
+        alt: "Suei's Portfolio Cover",
       },
     ],
   },
 };
 
-export default function RootLayout({
-  children,
-}: {
-  children: React.ReactNode;
-}) {
+export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en">
+    <html lang='en'>
       <body className={chakra.className}>{children}</body>
     </html>
   );

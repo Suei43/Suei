@@ -1,6 +1,6 @@
 "use client";
-import { Fragment, useEffect, useLayoutEffect, useRef, useState } from "react";
-import { gsap } from "gsap";
+import { Fragment, useEffect, useRef, useState } from "react";
+// @ts-ignore
 import { FullPage, Slide } from "react-full-page";
 
 /* Components */
@@ -27,22 +27,11 @@ const Home = () => {
   const projScrollRef = useRef(null);
 
   useEffect(() => {
-    setlocation("home");
     const timerId = setTimeout(() => {
       setLoading(false);
     }, 1400);
     return () => clearTimeout(timerId);
   }, []);
-
-  useLayoutEffect(() => {
-    if (!loading) {
-      gsap.to(".curr", {
-        backgroundColor: "#2c3539",
-        duration: 4,
-        ease: "power2.out",
-      });
-    }
-  }, [loading]);
 
   return (
     <LocationContext.Provider value={{ location, setlocation }}>

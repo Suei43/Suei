@@ -8,7 +8,7 @@ const DownArrow = (props: { size?: string; stroke?: string }) => {
       width={props.size}
       height={props.size}
       viewBox='0 0 100 100'
-      enable-background='new 0 0 100 100'
+      enableBackground='new 0 0 100 100'
     >
       <g>
         <path

@@ -1,10 +1,15 @@
 "use client";
-import React, { useLayoutEffect, useState } from "react";
+import React, { useLayoutEffect, useRef, useState } from "react";
 import { gsap } from "gsap";
 import Link from "next/link";
+import Image from "next/image";
+import Clover from "@/assets/svg/stem_clover.svg";
+import RightArrow from "../icons/RightArrow";
+import { useWindowWidth } from "@/hooks/useWindowWidth";
 
 export default function Intro() {
   const [isVisible, setIsVisible] = useState(false);
+  const width = useWindowWidth();
 
   const handleResumeClick = (e: React.SyntheticEvent) => {
     e.preventDefault();
@@ -18,24 +23,26 @@ export default function Intro() {
   useLayoutEffect(() => {
     const timerId = setTimeout(() => {
       setIsVisible(true);
-      const ctx: any = gsap.context(() => {
+
+      gsap.context(() => {
         const tl = gsap.timeline();
         tl.fromTo(
           ".el",
           {
-            y: 20,
+            y: -15,
             opacity: 0,
           },
           {
             y: 0,
             duration: 1,
             opacity: 1,
-            ease: "power2.out",
-            stagger: 0.2,
-          },
+            ease: "power2.inOut",
+            stagger: 0.1,
+          }
         );
       });
     }, 2400);
+
     return () => {
       clearTimeout(timerId);
     };
@@ -47,35 +54,30 @@ export default function Intro() {
         isVisible ? " flex " : "hidden"
       }`}
     >
-      <h1 className="text-5xl md:text-7xl text-white font-black el">
-        <span className="hover:cursor-pointer w-fit h-fit">
-          Folarin Raphael.
-        </span>
-      </h1>
-      <h2 className="text-secondary text-sm md:text-lg font-semibold el w-10/12">
+      <div className={`flex flex-col gap-4 text-5xl md:text-7xl text-white font-black el w-fit`}>
+        {width < 768 && <Image src={Clover} alt='clover' className='w-[40px]' />}
+        <p className='hover:cursor-pointer w-fit'>Folarin Raphael</p>
+      </div>
+      <h2 className='text-secondary text-sm md:text-lg font-semibold el w-10/12'>
         CLOUD NATIVE SOFTWARE ENGINEER
       </h2>
-      <p className="w-10/12 md:w-8/12 text-xs md:text-base el">
-        I build scalable, reliable software with exceptional user experiences. I
-        specialize in diagnosing and enhancing existing systems to improve
-        performance and usability.
+      <p className='w-10/12 md:w-8/12 text-xs md:text-base el'>
+        I build scalable, reliable software with exceptional user experiences. I specialize in diagnosing and
+        enhancing existing systems to improve performance and usability.
       </p>
-      <p className="">
+      <p className='el'>
         Looking for my{" "}
-        <Link
-          href={"https://blog.suei.dev"}
-          className="text-secondary hover:underline"
-          target="_blank"
-        >
+        <Link href={"https://blog.suei.dev"} className='text-secondary hover:underline' target='_blank'>
           blog?
         </Link>
       </p>
-      <div className="relative w-fit h-fit mt-5 rounded-lg el">
+      <div className='relative w-fit h-fit mt-5 rounded-lg el'>
         <button
           onClick={(e) => handleResumeClick(e)}
-          className="text-secondary border-2 border-secondary rounded-sm py-3 w-40 main-btn text-xs md:text-md"
+          className='flex flex-row items-center justify-center gap-[8px] text-secondary border-2 border-secondary rounded-sm py-3 w-40 main-btn text-xs md:text-md'
         >
-          Résumé
+          <span>Résumé</span>
+          <RightArrow />
         </button>
       </div>
     </div>
