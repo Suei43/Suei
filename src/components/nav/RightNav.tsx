@@ -1,5 +1,5 @@
 import { AboutIcon, ContactIcon, Exp, Code } from "../icons";
-import React, { useLayoutEffect, useEffect, useContext } from "react";
+import React, { useLayoutEffect, useContext } from "react";
 import { gsap } from "gsap";
 import { LocationContext } from "@/context/LocationContext";
 import Smiley from "../icons/Smiley";

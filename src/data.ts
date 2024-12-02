@@ -19,6 +19,7 @@ import tailwind from "@/assets/svg/tailwind.svg";
 import mongo from "@/assets/svg/mongo.svg";
 import helm from "@/assets/svg/helm.svg";
 import redis from "@/assets/svg/redis.svg";
+import sueidotdev from "@/assets/img/sueidotdev.png";
 
 export const technologies = [
   go,
@@ -114,15 +115,15 @@ export const projects = [
     description:
       "A cloud storage web application where users can upload, share, preview and store files and media for free.",
     tech: ["React", "Node JS", "MongoDB", "Mega"],
-    link: "https://cloudwave.ink",
+    link: "https://cloudwave.ink/",
     image: cloudwave,
-    git: "https://github.com/darksuei/cloudwave",
+    git: "https://github.com/darksuei/cloudwave/",
   },
   {
     name: "Krowdfi",
     id: 2,
     description: "A crowdfunding platform for exporters and backers to connect and fund campaigns.",
-    tech: ["React", "Typescript", "Firebase"],
+    tech: ["React", "Chakra UI", "Firebase"],
     link: "https://krowdfi.com/",
     image: krowdfi,
     git: "",
@@ -158,16 +159,15 @@ export const moreprojects = [
     tech: ["JavaScript", "Django", "PostgreSQL"],
     link: "https://raphaellyeditorial.netlify.app/",
     image: raphaelly,
-    git: "https://github.com/darksuei/raphaellyeditorials",
+    git: "https://github.com/darksuei/raphaellyeditorials/",
   },
   {
-    name: "KubeRPC",
+    name: "Portfolio v2.0",
     id: 6,
-    description:
-      "A lightweight kubernetes-native RPC framework designed to enable low-latency communication.",
-    tech: ["Go", "Kubernetes", "Redis"],
-    link: "https://blog.suei.dev/posts/yet_another_rpc_framework/",
-    image: kuberpc,
-    git: "https://github.com/darksuei/kuberpc",
+    description: "My personal portfolio.",
+    tech: ["Next JS", "Tailwind CSS", "Docker"],
+    link: "https://suei.dev/",
+    image: sueidotdev,
+    git: "https://github.com/darksuei/suei/",
   },
 ];

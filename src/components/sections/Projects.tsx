@@ -27,7 +27,7 @@ const Projects = forwardRef((_props: any, ref: any) => {
     e.preventDefault();
     setViewMore(!viewMore);
 
-    setShowcase(showcase === projects ? moreprojects : projects);
+    setShowcase(showcase.length === projects.length ? [...projects, ...moreprojects] : projects);
   };
 
   const getShowcase = () => {
@@ -47,7 +47,7 @@ const Projects = forwardRef((_props: any, ref: any) => {
           opacity: 0,
           y: -20,
         },
-        { opacity: 1, y: 0, duration: 1, ease: "power2.in", stagger: 0.2 }
+        { opacity: 1, y: 0, duration: 0.75, ease: "power2.in", stagger: 0.2 }
       );
     }, ".showcase_wrapper");
 
@@ -71,7 +71,7 @@ const Projects = forwardRef((_props: any, ref: any) => {
             return (
               <div
                 className={`p-4 rounded-lg ${
-                  getShowcase().length === 3 ? "md:w-3/12" : "md:w-5/12"
+                  getShowcase().length % 3 === 0 ? "md:w-3/12" : "md:w-5/12"
                 } border border-primary flex flex-col gap-y-4 relative items-center proj-card gradient-border showcase_item`}
                 key={item.id}
               >

@@ -33,7 +33,7 @@ const About = forwardRef((_props: any, ref: any) => {
         },
         {
           y: 0,
-          duration: 1,
+          duration: 0.75,
           opacity: 1,
           ease: "power2.inOut",
           stagger: 0.15,

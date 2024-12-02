@@ -61,7 +61,7 @@ const Experience = forwardRef((_props: any, ref: any) => {
     tl.to(card, {
       opacity: 0,
       y: -20,
-      duration: 0.4,
+      duration: 0.2,
       ease: "power1.out",
     });
 

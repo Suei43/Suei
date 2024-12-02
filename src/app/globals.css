@@ -152,6 +152,9 @@ html {
   .experience_touch_icon {
     transform: translateY(10px);
   }
+  .translate_y_half {
+    transform: translateY(50%);
+  }
 }
 
 .line {
