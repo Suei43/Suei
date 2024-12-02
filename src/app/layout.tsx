@@ -54,10 +54,10 @@ export const metadata: Metadata = {
     type: "website",
     images: [
       {
-        url: "/public/og-clover.png",
+        url: "/og-darksuei.jpeg",
         width: 1200,
         height: 630,
-        alt: "suei_cover",
+        alt: "",
       },
     ],
   },

@@ -50,7 +50,7 @@ export default function Intro() {
 
   return (
     <div
-      className={`absolute bottom-[25%] md:bottom-[15%] left-0 md:left-[5%] p-8 md:p-20 h-fit flex-col gap-y-4 w-full md:w-10/12 text-primary box-border ${
+      className={`absolute bottom-[50%] translate_y_half md:bottom-[15%] left-0 md:left-[5%] p-8 md:p-20 h-fit flex-col gap-y-4 w-full md:w-10/12 text-primary box-border ${
         isVisible ? " flex " : "hidden"
       }`}
     >

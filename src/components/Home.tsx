@@ -1,7 +1,5 @@
 "use client";
 import { Fragment, useEffect, useRef, useState } from "react";
-// @ts-ignore
-import { FullPage, Slide } from "react-full-page";
 
 /* Components */
 import LeftNav from "@/components/nav/LeftNav";
@@ -13,10 +11,8 @@ import Projects from "@/components/sections/Projects";
 import Experience from "@/components/sections/Experience";
 import Loading from "@/components/sub-components/Loading";
 import { LocationContext } from "@/context/LocationContext";
-import { useWindowWidth } from "@/hooks/useWindowWidth";
 
 const Home = () => {
-  const width = useWindowWidth();
   const [loading, setLoading] = useState(true);
   const [location, setlocation] = useState("home");
   const doc = useRef(null);
@@ -49,53 +45,21 @@ const Home = () => {
               contactScrollRef={contactScrollRef}
             />
           </div>
-          {width > 768 && (
-            <div className='w-screen flex flex-col box-border' ref={doc}>
-              <FullPage>
-                <Slide>
-                  <Fragment>
-                    <Main ref={homeScrollRef} />
-                  </Fragment>
-                </Slide>
-                <Slide>
-                  <Fragment>
-                    <About ref={aboutScrollRef} />
-                  </Fragment>
-                </Slide>
-                <Slide>
-                  <Fragment>
-                    <Experience ref={expScrollRef} />
-                  </Fragment>
-                </Slide>
-                <Slide>
-                  <Fragment>
-                    <Projects ref={projScrollRef} />
-                  </Fragment>
-                </Slide>
-                <Slide>
-                  <Contact ref={contactScrollRef} />
-                </Slide>
-              </FullPage>
-            </div>
-          )}
-
-          {width < 768 && (
-            <div className='w-screen flex flex-col box-border' ref={doc}>
-              <Fragment>
-                <Main ref={homeScrollRef} />
-              </Fragment>
-              <Fragment>
-                <About ref={aboutScrollRef} />
-              </Fragment>
-              <Fragment>
-                <Experience ref={expScrollRef} />
-              </Fragment>
-              <Fragment>
-                <Projects ref={projScrollRef} />
-              </Fragment>
-              <Contact ref={contactScrollRef} />
-            </div>
-          )}
+          <div className='w-screen flex flex-col box-border' ref={doc}>
+            <Fragment>
+              <Main ref={homeScrollRef} />
+            </Fragment>
+            <Fragment>
+              <About ref={aboutScrollRef} />
+            </Fragment>
+            <Fragment>
+              <Experience ref={expScrollRef} />
+            </Fragment>
+            <Fragment>
+              <Projects ref={projScrollRef} />
+            </Fragment>
+            <Contact ref={contactScrollRef} />
+          </div>
         </Fragment>
       )}
     </LocationContext.Provider>
