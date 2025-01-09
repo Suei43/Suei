@@ -45,19 +45,11 @@ const Home = () => {
               contactScrollRef={contactScrollRef}
             />
           </div>
-          <div className='w-screen flex flex-col box-border' ref={doc}>
-            <Fragment>
-              <Main ref={homeScrollRef} />
-            </Fragment>
-            <Fragment>
-              <About ref={aboutScrollRef} />
-            </Fragment>
-            <Fragment>
-              <Experience ref={expScrollRef} />
-            </Fragment>
-            <Fragment>
-              <Projects ref={projScrollRef} />
-            </Fragment>
+          <div className='w-screen flex flex-col box-border p-[12px]' ref={doc}>
+            <Main ref={homeScrollRef} />
+            <About ref={aboutScrollRef} />
+            <Experience ref={expScrollRef} />
+            <Projects ref={projScrollRef} />
             <Contact ref={contactScrollRef} />
           </div>
         </Fragment>
