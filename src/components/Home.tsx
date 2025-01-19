@@ -25,6 +25,7 @@ const Home = () => {
   useEffect(() => {
     const timerId = setTimeout(() => {
       setLoading(false);
+      console.log(`\x1b[1mLooking for something? :)\x1b[0m`);
     }, 1400);
     return () => clearTimeout(timerId);
   }, []);
